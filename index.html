@@ -1,42 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surface Angle Measure</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-slate-900 text-white flex flex-col items-center justify-center min-h-screen p-6 font-sans">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Inclinometer | Measure Surface Angle</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
 
-    <header class="text-center mb-10">
-        <h1 class="text-3xl font-bold tracking-tight">Online Inclinometer</h1>
-        <p class="text-slate-400 text-sm">Place device flat on the surface</p>
+  </style>
+</head>
+<body class="bg-slate-900 text-white flex flex-col min-h-screen font-sans">
+
+    <header class=" border mb-10 p-6 ">
+      <h1 class="text-3xl font-bold tracking-tight">Online Inclinometer</h1>
+
+      <div class="absolute right-4 top-4">
+        <button type="button" class="inline-flex items-center justify-center w-full p-1 
+           bg-slate-500 text-sm font-medium text-gray-700 
+           border border-gray-300 rounded-md shadow-sm 
+           hover:bg-gray-50 focus:outline-none transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" class="w-6 h-4 rounded-sm shadow-sm"><rect width="5" height="3" y="0" fill="#000"/><rect width="5" height="2" y="1" fill="#D00"/><rect width="5" height="1" y="2" fill="#FFCE00"/></svg>
+            <svg class="ml-2 -mr-1 h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+        </button>
+
+        <div class="hidden absolute right-0 mt-0  z-50 p-2
+           bg-white rounded-md shadow-lg 
+           ring-1 ring-black gap-2
+           flex justify-center">
+
+          <a href="/de{{ request.path | replace('/de', '', 1) }}" 
+            class="lang-dropdown-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" class="w-6 h-4 rounded-sm shadow-sm"><rect width="5" height="3" y="0" fill="#000"/><rect width="5" height="2" y="1" fill="#D00"/><rect width="5" height="1" y="2" fill="#FFCE00"/></svg>
+          </a>
+
+          <a href="/en{{ request.path | replace('/de', '', 1)}}" 
+            class="lang-dropdown-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30" class="w-6 h-4 rounded-sm shadow-sm"><rect width="50" height="30" fill="#012169"/><path d="M0,0 L50,30 M50,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L50,30 M50,0 L0,30" stroke="#C8102E" stroke-width="4"/><path d="M25,0 v30 M0,15 h50" stroke="#fff" stroke-width="10"/><path d="M25,0 v30 M0,15 h50" stroke="#C8102E" stroke-width="6"/></svg>
+          </a>
+
+          <a href="/es{{ request.path | replace('/de', '', 1)}}" 
+            class="lang-dropdown-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" class="w-6 h-4 rounded-sm shadow-sm"><rect width="5" height="3" fill="#c60b1e"/><rect width="5" height="1.5" y="0.75" fill="#ffc400"/></svg>
+          </a>
+
+          <a href="/fr{{ request.path | replace('/de', '', 1)}}" 
+            class="lang-dropdown-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" class="w-6 h-4 rounded-sm shadow-sm"><rect width="1" height="2" fill="#002395"/><rect width="1" height="2" x="1" fill="#fff"/><rect width="1" height="2" x="2" fill="#ED2939"/></svg>
+          </a>
+
+          <a href="/it{{ request.path | replace('/de', '', 1)}}" 
+            class="lang-dropdown-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" class="w-6 h-4 rounded-sm shadow-sm"><rect width="1" height="2" fill="#009246"/><rect width="1" height="2" x="1" fill="#fff"/><rect width="1" height="2" x="2" fill="#ce2b37"/></svg>
+          </a>
+        </div>
+      </div>
     </header>
 
-    <div class="relative w-64 h-64 bg-slate-800 rounded-full border-4 border-slate-700 flex items-center justify-center shadow-2xl">
-        <div class="absolute w-4 h-4 border-2 border-cyan-500 rounded-full"></div>
+    <div class = "border p-4 text-center">
+      <p class="text-slate-400 text-sm">Place device flat on the surface</p>
+    </div>
+
+    <div class="border w-64 h-64 bg-slate-800 rounded-full border-4 border-slate-700 flex items-center justify-center shadow-2xl">
+      <div class="absolute w-4 h-4 border-2 border-cyan-500 rounded-full"></div>
         
-        <div id="bubble" class="w-12 h-12 bg-cyan-500 rounded-full opacity-80 transition-transform duration-75 ease-out shadow-[0_0_20px_rgba(6,182,212,0.5)]"></div>
+      <div id="bubble" class="w-12 h-12 bg-cyan-500 rounded-full opacity-80 transition-transform duration-75 ease-out shadow-[0_0_20px_rgba(6,182,212,0.5)]"></div>
     </div>
 
-    <div class="grid grid-cols-2 gap-4 mt-12 w-full max-w-xs">
-        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 text-center">
-            <span class="block text-xs uppercase text-slate-500 font-bold">Pitch (X)</span>
-            <span id="pitch-val" class="text-2xl font-mono">0°</span>
-        </div>
-        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 text-center">
-            <span class="block text-xs uppercase text-slate-500 font-bold">Roll (Y)</span>
-            <span id="roll-val" class="text-2xl font-mono">0°</span>
-        </div>
+    <div class="border grid grid-cols-2 gap-4 flex text-center justify-center w-full">
+      <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 text-center">
+        <span class="block text-xs uppercase text-slate-500 font-bold">Pitch (X)</span>
+        <span id="pitch-val" class="text-2xl font-mono">0°</span>
+      </div>
+      <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 text-center">
+        <span class="block text-xs uppercase text-slate-500 font-bold">Roll (Y)</span>
+        <span id="roll-val" class="text-2xl font-mono">0°</span>
+      </div>
     </div>
 
-    <div class="mt-10">
+    <div class="mt-10 flex justify-center">
         <button id="start-btn" class="bg-cyan-600 hover:bg-cyan-500 px-8 py-3 rounded-full font-bold transition-colors shadow-lg">
-            Start Sensors
+            Start Measuring
         </button>
         <button id="stop-btn" class="hidden bg-cyan-600 hover:bg-cyan-500 px-8 py-3 rounded-full font-bold transition-colors shadow-lg">
             Stop Measuring
         </button>
+    </div>
+
+    <div id="my-ad-container" class = " absolute bottom-0 border" style="width: 100%; text-align: center;">
+        <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+            crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script> -->
     </div>
 
     <script>
