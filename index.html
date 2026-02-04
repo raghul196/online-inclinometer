@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surface Angle Measure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white flex flex-col items-center justify-center min-h-screen p-6 font-sans">
+
+    <header class="text-center mb-10">
+        <h1 class="text-3xl font-bold tracking-tight">Online Inclinometer</h1>
+        <p class="text-slate-400 text-sm">Place device flat on the surface</p>
+    </header>
+
+    <div class="relative w-64 h-64 bg-slate-800 rounded-full border-4 border-slate-700 flex items-center justify-center shadow-2xl">
+        <div class="absolute w-4 h-4 border-2 border-cyan-500 rounded-full"></div>
+        
+        <div id="bubble" class="w-12 h-12 bg-cyan-500 rounded-full opacity-80 transition-transform duration-75 ease-out shadow-[0_0_20px_rgba(6,182,212,0.5)]"></div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 mt-12 w-full max-w-xs">
+        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 text-center">
+            <span class="block text-xs uppercase text-slate-500 font-bold">Pitch (X)</span>
+            <span id="pitch-val" class="text-2xl font-mono">0°</span>
+        </div>
+        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 text-center">
+            <span class="block text-xs uppercase text-slate-500 font-bold">Roll (Y)</span>
+            <span id="roll-val" class="text-2xl font-mono">0°</span>
+        </div>
+    </div>
+
+    <div class="mt-10">
+        <button id="start-btn" class="bg-cyan-600 hover:bg-cyan-500 px-8 py-3 rounded-full font-bold transition-colors shadow-lg">
+            Start Sensors
+        </button>
+        <button id="stop-btn" class="hidden bg-cyan-600 hover:bg-cyan-500 px-8 py-3 rounded-full font-bold transition-colors shadow-lg">
+            Stop Measuring
+        </button>
+    </div>
+
+    <script>
+        // Utilizing your stored configuration for initialization
+        const optimParams = {
+            sensitivity: 0.5,
+            smoothing: true,
+            unit: 'degrees'
+        };
+
+        const bubble = document.getElementById('bubble');
+        const pitchVal = document.getElementById('pitch-val');
+        const rollVal = document.getElementById('roll-val');
+        const startBtn = document.getElementById('start-btn');
+        const stopBtn = document.getElementById('stop-btn');
+
+        function handleOrientation(event) {
+            // Beta: front-back tilt (-180 to 180)
+            // Gamma: left-right tilt (-90 to 90)
+            let x = event.beta; 
+            let y = event.gamma;
+
+            // Constrain values for visual bubble
+            const maxTilt = 20;
+            const multiplier = 5; // Scale movement
+
+            // Update UI
+            pitchVal.innerText = `${Math.round(x)}°`;
+            rollVal.innerText = `${Math.round(y)}°`;
+
+            // Move bubble (X and Y are swapped for intuitive flat surface mapping)
+            const moveX = Math.max(Math.min(y * multiplier, 100), -100);
+            const moveY = Math.max(Math.min(x * multiplier, 100), -100);
+            
+            bubble.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            
+            // Visual feedback when level
+            if (Math.abs(x) < 1 && Math.abs(y) < 1) {
+                bubble.classList.replace('bg-cyan-500', 'bg-green-500');
+            } else {
+                bubble.classList.replace('bg-green-500', 'bg-cyan-500');
+            }
+        }
+
+        startBtn.addEventListener('click', async () => {
+            // Request permission for iOS 13+ devices
+            if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+                try {
+                    const permission = await DeviceOrientationEvent.requestPermission();
+                    if (permission === 'granted') {
+                        window.addEventListener('deviceorientation', handleOrientation);
+                        startBtn.classList.add('hidden');
+                        stopBtn.classList.remove('hidden');
+                        
+                    }
+                } catch (err) {
+                    console.error("Permission denied");
+                }
+            } else {
+                // Non-iOS or older devices
+                window.addEventListener('deviceorientation', handleOrientation);
+                startBtn.classList.add('hidden');
+                stopBtn.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
