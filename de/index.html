@@ -48,7 +48,10 @@
         </div>
       </div>
 
-      <div class="mt-6 flex justify-center mb-4">
+      <div class="mt-6 flex justify-center mb-4 gap-4">
+          <button id="zero-btn" class="bg-amber-600 hover:bg-amber-500 px-8 py-3 rounded-full font-bold transition-colors shadow-lg">
+            Zero
+          </button>
           <button id="start-btn" class="bg-cyan-600 hover:bg-cyan-500 px-8 py-3 rounded-full font-bold transition-colors shadow-lg">
               Messung Anfangen
           </button>
@@ -92,12 +95,29 @@
       const rollVal = document.getElementById('roll-val');
       const startBtn = document.getElementById('start-btn');
       const stopBtn = document.getElementById('stop-btn');
+      const zeroBtn = document.getElementById('zero-btn');
+
+      let pitchOffset = 0;
+      let rollOffset = 0;
+      let lastPitch = 0;
+      let lastRoll = 0;
+      let isMeasuring = false;
+      let zeroOnStart = false;
 
       function handleOrientation(event) {
+          if (zeroOnStart) {
+            pitchOffset = event.beta;
+            rollOffset = event.gamma;
+            zeroOnStart = false;
+          }
+
+          lastPitch = event.beta;
+          lastRoll = event.gamma;
+          
           // Beta: front-back tilt (-180 to 180)
           // Gamma: left-right tilt (-90 to 90)
-          let x = event.beta; 
-          let y = event.gamma;
+          let x = lastPitch - pitchOffset; 
+          let y = lastRoll - rollOffset;
 
           // Constrain values for visual bubble
           const maxTilt = 20;
@@ -121,6 +141,17 @@
           }
       }
 
+      zeroBtn.addEventListener('click', () => {
+          if (isMeasuring) {
+              pitchOffset = lastPitch;
+              rollOffset = lastRoll;
+          } else {
+              pitchVal.innerText = '0°';
+              rollVal.innerText = '0°';
+              zeroOnStart = true;
+          }
+      });
+
       startBtn.addEventListener('click', async () => {
           // Request permission for iOS 13+ devices
         pitchVal.classList.remove('text-cyan-400');
@@ -133,6 +164,7 @@
                       window.addEventListener('deviceorientation', handleOrientation);
                       startBtn.classList.add('hidden');
                       stopBtn.classList.remove('hidden');
+                      isMeasuring = true;
                       
                   }
               } catch (err) {
@@ -143,6 +175,7 @@
               window.addEventListener('deviceorientation', handleOrientation);
               startBtn.classList.add('hidden');
               stopBtn.classList.remove('hidden');
+              isMeasuring = true;
           }
       });
       stopBtn.addEventListener('click', ()=>{
@@ -151,6 +184,8 @@
         stopBtn.classList.add('hidden');
         pitchVal.classList.add('text-cyan-400');
         rollVal.classList.add('text-cyan-400');
+        isMeasuring = false;
+        zeroOnStart = false;
       });
       
   </script>
