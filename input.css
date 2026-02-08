@@ -6,18 +6,233 @@
   }
 
   .app-header {
-    @apply flex h-[10dvh] items-center p-6;
+    @apply flex h-[10dvh] items-center p-6 relative;
+  }
+  
+  .main-title {
+    @apply text-3xl font-bold tracking-tight;
+  }
+
+  .main-title-de {
+    @apply text-2xl font-bold tracking-tight;
+  }
+
+  .placeholder {
+    @apply w-8;
   }
 
   .settings-button {
-    @apply p-2 rounded-full hover:bg-slate-800;
+    @apply p-2 rounded-full hover:bg-slate-800 absolute right-2;
+  }
+
+  .icon-lg {
+    @apply w-6 h-6;
+  }
+
+  .main-content-area {
+    @apply h-[75dvh] overflow-hidden overflow-y-auto;
+  }
+
+  .inclinometer-container {
+    @apply flex flex-col items-center h-[75dvh] flex-1 justify-center;
+  }
+
+  .instruction-text-container {
+    @apply p-4 text-center mb-2;
+  }
+
+  .instruction-text {
+    @apply text-slate-400 text-sm;
+  }
+
+  .bubble-container-background {
+    @apply relative mb-6 w-64 h-64 bg-slate-800 rounded-full border-4 border-slate-700 flex items-center justify-center shadow-2xl;
+  }
+
+  #bubble {
+    @apply w-12 h-12 bg-cyan-500 rounded-full opacity-80 transition-transform duration-75 ease-in-out shadow-[0_0_20px_rgba(6,182,212,0.5)];
+  }
+
+  .bubble-center-mark {
+    @apply absolute w-4 h-4 border-2 border-cyan-500 rounded-full;
+  }
+
+  .readout-grid {
+    @apply px-6 grid grid-cols-2 gap-4 flex text-center justify-center w-full;
+  }
+
+  .readout-box {
+    @apply bg-slate-800 p-4 rounded-xl border border-slate-700 text-center;
+  }
+
+  .readout-label {
+    @apply block text-xs uppercase text-slate-500 font-bold;
+  }
+
+  .readout-value {
+    @apply text-2xl font-mono;
+  }
+
+  .button-container {
+    @apply mt-6 flex justify-center mb-4 gap-4;
+  }
+
+  .zero-button {
+    @apply bg-amber-600 hover:bg-amber-500 px-8 py-3 rounded-full font-bold transition-colors shadow-lg;
+  }
+
+  .control-button {
+    @apply bg-cyan-600 hover:bg-cyan-500 px-8 py-3 rounded-full font-bold transition-colors shadow-lg;
+  }
+
+  .promo-banner {
+    @apply mt-10 py-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 border-y border-slate-800/60 text-sm;
+  }
+
+  .promo-text {
+    @apply text-slate-500 italic;
+  }
+
+  .promo-divider {
+    @apply hidden sm:block h-4 w-px bg-slate-800;
+  }
+
+  .promo-link {
+    @apply text-slate-300 hover:text-white underline decoration-blue-500/50 underline-offset-4 transition-colors;
+  }
+
+  .promo-link-strong {
+    @apply font-semibold text-blue-400;
+  }
+
+  .how-it-works-section {
+    @apply px-6 py-10 text-left text-slate-400 text-sm;
+  }
+
+  .section-title {
+    @apply text-2xl font-semibold text-white mb-4 text-center;
+  }
+
+  .section-intro {
+    @apply max-w-3xl mx-auto mb-6;
+  }
+
+  .section-grid {
+    @apply max-w-3xl mx-auto grid md:grid-cols-2 gap-8;
+  }
+
+  .subsection-title {
+    @apply text-lg font-semibold text-white mb-2;
+  }
+
+  .feature-list {
+    @apply list-disc list-inside space-y-2;
+  }
+
+  .paragraph-margin {
+    @apply mb-2;
+  }
+  
+  .section-outro {
+    @apply max-w-3xl mx-auto mt-6 text-center;
+  }
+
+  .footer-links {
+    @apply py-10 flex flex-row justify-center gap-6 text-slate-500 text-sm border-t border-slate-800;
+  }
+
+  .footer-link {
+    @apply hover:text-cyan-400;
+  }
+
+  #my-ad-container {
+    @apply z-10 flex border h-[15dvh];
+  }
+
+  #settings-panel {
+    @apply fixed inset-0 bg-slate-900 flex justify-center items-center;
   }
 
   .settings-panel-card {
     @apply bg-slate-800 rounded-lg shadow-xl p-6 w-full max-w-sm;
   }
 
+  .settings-header {
+    @apply flex justify-between items-center mb-4;
+  }
+  
+  .settings-title {
+    @apply text-xl font-bold;
+  }
+
+  .close-settings-button {
+    @apply p-2 rounded-full hover:bg-slate-700;
+  }
+
+  .settings-options {
+    @apply space-y-4;
+  }
+
+  .settings-option {
+    @apply flex justify-between items-center;
+  }
+
+  .settings-label {
+    @apply text-slate-300;
+  }
+
+  #audio-toggle {
+    @apply w-12 h-6 flex items-center rounded-full px-1 bg-slate-700;
+  }
+
+  #audio-toggle span {
+    @apply w-4 h-4 rounded-full bg-white transform transition-transform;
+  }
+
   .form-select {
     @apply bg-slate-700 text-white rounded-md p-1;
   }
+}
+
+/* Container for the dropdown logic */
+.dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Style the links container */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #ffffff; /* Match your app's background */
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 10;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+/* Individual links inside the dropdown */
+.dropdown-content a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Hover effect on the links */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* THE MAGIC: Show the menu on hover */
+.dropdown-wrapper:hover .dropdown-content {
+    display: block;
+}
+
+/* Optional: Make the trigger look like your other inputs */
+.dropdown-trigger {
+    padding-right: 25px; /* Space for the arrow */
 }

@@ -20,72 +20,102 @@
 
 <body class="app-body">  
 
-  <header class="app-header group relative">
-    <div class="w-8"></div> <!-- placeholder -->
-    <h1 class="text-3xl font-bold tracking-tight">Inclinometer</h1>
-    <button id="settings-btn" class="settings-button absolute right-2">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+  <header class="app-header">
+    <div class="placeholder"></div> <!-- placeholder -->
+    <h1 class="main-title">Inclinometer</h1>
+    <button id="settings-btn" class="settings-button">
+      <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
     </button>
   </header>
 
-  <div class = "h-[75dvh] overflow-hidden overflow-y-auto">
-    <div class = "flex flex-col items-center h-[75dvh] flex-1 justify-center">
-      <div class = "p-4 text-center mb-2">
-        <p class="text-slate-400 text-sm">Place device flat on the surface</p>
+  <div class="main-content-area">
+    <div class="inclinometer-container">
+      <div class="instruction-text-container">
+        <p class="instruction-text">Place device flat on the surface</p>
       </div>
 
-      <div class="group relative mb-6 w-64 h-64 bg-slate-800 rounded-full border-4 border-slate-700 flex items-center justify-center shadow-2xl">        
-        <div id="bubble" class="w-12 h-12 bg-cyan-500 rounded-full opacity-80 transition-transform duration-75 ease-in-out shadow-[0_0_20px_rgba(6,182,212,0.5)]">
+      <div class="bubble-container-background">        
+        <div id="bubble">
         </div>
-        <div class="absolute w-4 h-4 border-2 border-cyan-500 rounded-full"></div>
+        <div class="bubble-center-mark"></div>
       </div>
 
-      <div class="px-6 grid grid-cols-2 gap-4 flex text-center justify-center w-full">
-        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 text-center">
-          <span class="block text-xs uppercase text-slate-500 font-bold">Pitch (X)</span>
-          <span id="pitch-val" class="text-2xl font-mono">-°</span>
+      <div class="readout-grid">
+        <div class="readout-box">
+          <span class="readout-label">Pitch (X)</span>
+          <span id="pitch-val" class="readout-value">-°</span>
         </div>
-        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 text-center">
-          <span class="block text-xs uppercase text-slate-500 font-bold">Roll (Y)</span>
-          <span id="roll-val" class="text-2xl font-mono">-°</span>
+        <div class="readout-box">
+          <span class="readout-label">Roll (Y)</span>
+          <span id="roll-val" class="readout-value">-°</span>
         </div>
       </div>
 
-      <div class="mt-6 flex justify-center mb-4 gap-4">
-          <button id="zero-btn" class="bg-amber-600 hover:bg-amber-500 px-8 py-3 rounded-full font-bold transition-colors shadow-lg">
+      <div class="button-container">
+          <button id="zero-btn" class="zero-button">
             Zero
           </button>
-          <button id="start-btn" class="bg-cyan-600 hover:bg-cyan-500 px-8 py-3 rounded-full font-bold transition-colors shadow-lg">
+          <button id="start-btn" class="control-button">
               Start Measuring
           </button>
-          <button id="stop-btn" class="hidden bg-cyan-600 hover:bg-cyan-500 px-8 py-3 rounded-full font-bold transition-colors shadow-lg">
+          <button id="stop-btn" class="control-button hidden">
               Stop Measuring
           </button>
       </div>
     </div>
 
-    <div class="mt-10 py-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 border-y border-slate-800/60 text-sm">
-      <span class="text-slate-500 italic">Working on a Solar project?</span>
-      <div class="hidden sm:block h-4 w-px bg-slate-800"></div>
+    <div class="promo-banner">
+      <span class="promo-text">Working on a Solar project?</span>
+      <div class="promo-divider"></div>
       <a href="https://pvfreund.com/?lang=en" 
-        class="text-slate-300 hover:text-white underline decoration-blue-500/50 underline-offset-4 transition-colors">
-        Try our free PV design tool at <strong class="font-semibold text-blue-400">PV Freund</strong> 
+        class="promo-link">
+        Try our free PV design tool at <strong class="promo-link-strong">PV Freund</strong> 
       </a>
     </div>
 
-    <div class="px-6 py-10 text-center text-slate-400 text-sm">
-      <h2 class="text-lg font-semibold text-white mb-2">How it Works</h2>
-      <p class="max-w-2xl mx-auto">This online inclinometer uses your device's built-in sensors to measure surface angles (pitch and roll). Place your phone on a surface and press 'Start Measuring' to see the tilt in real-time. The 'Zero' button allows you to set the current angle as 0 for relative measurements. It's a handy tool for Solar-PV installation, leveling, construction, Wood work, DIY projects, and more.</p>
+    <div class="how-it-works-section">
+      <h2 class="section-title">How Our Online Inclinometer Works</h2>
+      <p class="section-intro">
+        This online inclinometer is a web-based application designed to measure surface angles with high precision, using the sensors already built into your smartphone or tablet. It transforms your device into a powerful digital spirit level, bubble level, or clinometer without requiring any software installation. Everything runs directly in your web browser.
+      </p>
+      <div class="section-grid">
+        <div>
+          <h3 class="subsection-title">Core Functionality</h3>
+          <ul class="feature-list">
+            <li><strong>Real-time Measurement:</strong> Once you grant sensor access and press 'Start', the application reads data from your device's accelerometer and gyroscope to calculate the pitch (X-axis) and roll (Y-axis) angles in real-time.</li>
+            <li><strong>High-Precision Bubble Level:</strong> The central graphic interface features a virtual bubble that moves based on the device's tilt, providing an intuitive visual guide to achieving a perfect level.</li>
+            <li><strong>Zero Calibration:</strong> The 'Zero' button allows you to set any surface as a reference point. This is useful for measuring the angle of one surface relative to another, rather than to absolute level.</li>
+            <li><strong>Unit Conversion:</strong> In the settings panel, you can switch between measuring in degrees (°) and percent (%).</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="subsection-title">Common Use Cases</h3>
+          <p class="paragraph-margin">This tool is perfect for a wide range of tasks, including:</p>
+          <ul class="feature-list">
+            <li><strong>Construction & Carpentry:</strong> Ensuring walls are plumb, floors are level, and beams are installed at the correct angle.</li>
+            <li><strong>Solar Panel Installation:</strong> Optimizing energy generation by setting PV panels to the precise tilt angle for your location.</li>
+            <li><strong>DIY Projects:</strong> Hanging picture frames, installing shelves, or assembling furniture with perfect alignment.</li>
+            <li><strong>Photography & Videography:</strong> Leveling your camera for perfectly straight horizons in your shots.</li>
+            <li><strong>Vehicle Maintenance:</strong> Checking the angle of components for alignment or during repairs.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-outro">
+        <h3 class="subsection-title">100% Private and Secure</h3>
+        <p>
+          We are committed to your privacy. All sensor data is processed directly on your device by the browser. No information is ever sent to our servers. Your measurements are your own.
+        </p>
+      </div>
     </div>
 
-    <div class=" py-10 flex flex-row justify-center gap-6 text-slate-500 text-sm border-t border-slate-800">
-      <a href="./privacy.html" class="hover:text-cyan-400">Privacy</a>
-      <a href="./contact.html" class="hover:text-cyan-400">Contact</a>
-      <a href="./aboutus.html" class="hover:text-cyan-400">About</a>
+    <div class="footer-links">
+      <a href="./privacy.html" class="footer-link">Privacy</a>
+      <a href="./contact.html" class="footer-link">Contact</a>
+      <a href="./aboutus.html" class="footer-link">About</a>
     </div>
   </div>
 
-  <div id="my-ad-container" class = "z-10 flex border h-[15dvh]" style="width: 100%; text-align: center;">
+  <div id="my-ad-container" style="width: 100%; text-align: center;">
       <ins class="adsbygoogle"
           style="display:block"
           data-ad-client="ca-pub-5227302043053716"
@@ -97,37 +127,34 @@
       </script>
   </div>
 
-  <div id="settings-panel" class="hidden fixed inset-0 bg-slate-900 bg-opacity-80 flex justify-center items-center">
+  <div id="settings-panel" class = "hidden">
     <div class="settings-panel-card">
-        <div class="flex justify-between items-center mb-4">
-            <h2 class="text-xl font-bold">Settings</h2>
-            <button id="close-settings-btn" class="p-2 rounded-full hover:bg-slate-700">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        <div class="settings-header">
+            <h2 class="settings-title">Settings</h2>
+            <button id="close-settings-btn" class="close-settings-button">
+                <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
         </div>
-        <div class="space-y-4">
+        <div class="settings-options">
             <!-- Audio Toggle -->
-            <div class="flex justify-between items-center">
-                <label for="audio-toggle" class="text-slate-300">Audio Feedback</label>
-                <button id="audio-toggle" class="w-12 h-6 flex items-center rounded-full px-1 bg-slate-700">
-                    <span class="w-4 h-4 rounded-full bg-white transform transition-transform"></span>
+            <div class="settings-option">
+                <label for="audio-toggle" class="settings-label">Audio Feedback</label>
+                <button id="audio-toggle">
+                    <span></span>
                 </button>
             </div>
-            <!-- Unit Selection -->
-            <div class="flex justify-between items-center">
-                <label for="unit-select" class="text-slate-300">Unit</label>
-                <select id="unit-select" class="form-select">
-                    <option value="degrees">Degrees (°)</option>
-                    <option value="percent">Percent (%)</option>
-                </select>
-            </div>
+
             <!-- Language Selection -->
-            <div class="flex justify-between items-center">
-                <label for="lang-select" class="text-slate-300">Language</label>
-                <select id="lang-select" class="form-select">
-                    <option value="en">English</option>
-                    <option value="de">Deutsch</option>
-                </select>
+            <div class="settings-option">
+                <label for="lang-select" class="settings-label">Language</label>
+                <div class="dropdown-wrapper">
+                    <div class="form-select dropdown-trigger">English</div>
+                    
+                    <div class="dropdown-content">
+                        <a href="https://online-inclinometer.com">English</a>
+                        <a href="https://online-inclinometer.com/de">Deutsch</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

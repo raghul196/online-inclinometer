@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -20,72 +21,102 @@
 </head>
 <body class="app-body">  
 
-  <header class="app-header group relative">
-    <div class="w-8"></div> <!-- placeholder -->
-    <h1 class="text-2xl font-bold tracking-tight">Neigungsmesser</h1>
-    <button id="settings-btn" class="settings-button absolute right-2">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+  <header class="app-header">
+    <div class="placeholder"></div> <!-- placeholder -->
+    <h1 class="main-title-de">Neigungsmesser</h1>
+    <button id="settings-btn" class="settings-button">
+      <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
     </button>
   </header>
 
-  <div class = "h-[75dvh] overflow-hidden overflow-y-auto">
-    <div class = "flex flex-col items-center h-[75dvh] flex-1 justify-center">
-      <div class = "p-4 text-center mb-2">
-        <p class="text-slate-400 text-sm">Gerät flach auf die Oberfläche legen</p>
+  <div class="main-content-area">
+    <div class="inclinometer-container">
+      <div class="instruction-text-container">
+        <p class="instruction-text">Gerät flach auf die Oberfläche legen</p>
       </div>
 
-      <div class="group relative mb-6 w-64 h-64 bg-slate-800 rounded-full border-4 border-slate-700 flex items-center justify-center shadow-2xl">        
-        <div id="bubble" class="w-12 h-12 flex items-center justify-center bg-cyan-500 rounded-full opacity-80 transition-transform duration-300 ease-in-out shadow-[0_0_20px_rgba(6,182,212,0.5)]">
+      <div class="bubble-container-background">        
+        <div id="bubble">
           
         </div>
-        <div class="absolute w-4 h-4 border-2 border-cyan-500 rounded-full"></div>
+        <div class="bubble-center-mark"></div>
       </div>
 
-      <div class="px-6 grid grid-cols-2 gap-4 flex text-center justify-center w-full">
-        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 text-center">
-          <span class="block text-xs uppercase text-slate-500 font-bold">Neigung (X)</span>
-          <span id="pitch-val" class="text-2xl font-mono">-°</span>
+      <div class="readout-grid">
+        <div class="readout-box">
+          <span class="readout-label">Neigung (X)</span>
+          <span id="pitch-val" class="readout-value">-°</span>
         </div>
-        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 text-center">
-          <span class="block text-xs uppercase text-slate-500 font-bold">Rollwinkel (Y)</span>
-          <span id="roll-val" class="text-2xl font-mono">-°</span>
+        <div class="readout-box">
+          <span class="readout-label">Rollwinkel (Y)</span>
+          <span id="roll-val" class="readout-value">-°</span>
         </div>
       </div>
 
-      <div class="mt-6 flex justify-center mb-4 gap-4">
-          <button id="zero-btn" class="bg-amber-600 hover:bg-amber-500 px-8 py-3 rounded-full font-bold transition-colors shadow-lg">
+      <div class="button-container">
+          <button id="zero-btn" class="zero-button">
             Zero
           </button>
-          <button id="start-btn" class="bg-cyan-600 hover:bg-cyan-500 px-8 py-3 rounded-full font-bold transition-colors shadow-lg">
+          <button id="start-btn" class="control-button">
               Messung Anfangen
           </button>
-          <button id="stop-btn" class="hidden bg-cyan-600 hover:bg-cyan-500 px-8 py-3 rounded-full font-bold transition-colors shadow-lg">
+          <button id="stop-btn" class="control-button hidden">
               Messung Aufhören
           </button>
       </div>
     </div>
 
-    <div class="mt-10 py-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 border-y border-slate-800/60 text-sm">
-      <span class="text-slate-500 italic">Installieren sie PV Anlage?</span>
+    <div class="promo-banner">
+      <span class="promo-text">Installieren sie PV Anlage?</span>
       <a href="https://pvfreund.com/?lang=de" 
-        class="text-slate-300 px-8 hover:text-white underline decoration-blue-500/50 underline-offset-4 transition-colors">
-        Probieren Sie unser kostenloses PV Planungstool unter <strong class="font-semibold text-blue-400">PV Freund</strong> 
+        class="promo-link">
+        Probieren Sie unser kostenloses PV Planungstool unter <strong class="promo-link-strong">PV Freund</strong> 
       </a>
     </div>
 
-    <div class="px-6 py-10 text-center text-slate-400 text-sm">
-      <h2 class="text-lg font-semibold text-white mb-2">Wie es funktioniert</h2>
-      <p class="max-w-2xl mx-auto">Dieser Online-Neigungsmesser verwendet die eingebauten Sensoren Ihres Geräts (Handy / Tablet), um Oberflächenwinkel (Neigung und Rollwinkel) zu messen. Legen Sie Ihr Handy auf eine Oberfläche und drücken Sie 'Messung anfangen', um die Neigung in Echtzeit zu sehen. Mit der 'Zero'-Taste können Sie den aktuellen Winkel für relative Messungen auf 0 setzen. Es ist ein praktisches Werkzeug zum PV installation, Nivellieren, für den Bau, für Heimwerkerprojekte und mehr.</p>
-    </div>
+    <div class="how-it-works-section">
+      <h2 class="section-title">Wie unser Online-Neigungsmesser funktioniert</h2>
+      <p class="section-intro">
+          Dieser Online-Neigungsmesser ist eine webbasierte Anwendung, die entwickelt wurde, um Oberflächenwinkel mit hoher Präzision zu messen, indem sie die bereits in Ihrem Smartphone oder Tablet integrierten Sensoren verwendet. Er verwandelt Ihr Gerät in eine leistungsstarke digitale Wasserwaage, Libelle oder einen Neigungsmesser, ohne dass eine Software-Installation erforderlich ist. Alles läuft direkt in Ihrem Webbrowser.
+      </p>
+      <div class="section-grid">
+          <div>
+              <h3 class="subsection-title">Kernfunktionalität</h3>
+              <ul class="feature-list">
+                  <li><strong>Echtzeitmessung:</strong> Sobald Sie den Sensorzugriff gewähren und 'Messung anfangen' drücken, liest die Anwendung Daten vom Beschleunigungsmesser und Gyroskop Ihres Geräts aus, um die Neigungs- (X-Achse) und Rollwinkel (Y-Achse) in Echtzeit zu berechnen.</li>
+                  <li><strong>Hochpräzise Libelle:</strong> Die zentrale grafische Benutzeroberfläche verfügt über eine virtuelle Blase, die sich je nach Neigung des Geräts bewegt und eine intuitive visuelle Orientierungshilfe zum Erreichen einer perfekten Ausrichtung bietet.</li>
+                  <li><strong>Null-Kalibrierung:</strong> Mit der 'Zero'-Taste können Sie jede Oberfläche als Referenzpunkt festlegen. Dies ist nützlich, um den Winkel einer Oberfläche relativ zu einer anderen zu messen, anstatt zum absoluten Niveau.</li>
+                  <li><strong>Einheitenumrechnung:</strong> Im Einstellungsfenster können Sie zwischen der Messung in Grad (°) und Prozent (%) umschalten.</li>
+              </ul>
+          </div>
+          <div>
+              <h3 class="subsection-title">Häufige Anwendungsfälle</h3>
+              <p class="paragraph-margin">Dieses Werkzeug ist perfekt für eine Vielzahl von Aufgaben, einschließlich:</p>
+              <ul class="feature-list">
+                  <li><strong>Bau & Schreinerei:</strong> Sicherstellen, dass Wände lotrecht, Böden eben sind und Balken im richtigen Winkel installiert werden.</li>
+                  <li><strong>Solarpanel-Installation:</strong> Optimierung der Energieerzeugung durch Einstellung der PV-Module auf den genauen Neigungswinkel für Ihren Standort.</li>
+                  <li><strong>Heimwerkerprojekte:</strong> Bilderrahmen aufhängen, Regale installieren oder Möbel mit perfekter Ausrichtung zusammenbauen.</li>
+                  <li><strong>Fotografie & Videografie:</strong> Nivellieren Sie Ihre Kamera für perfekt gerade Horizonte in Ihren Aufnahmen.</li>
+                  <li><strong>Fahrzeugwartung:</strong> Überprüfen des Winkels von Komponenten zur Ausrichtung oder bei Reparaturen.</li>
+              </ul>
+          </div>
+      </div>
+      <div class="section-outro">
+        <h3 class="subsection-title">100% Privat und Sicher</h3>
+        <p>
+            Wir verpflichten uns zu Ihrer Privatsphäre. Alle Sensordaten werden direkt auf Ihrem Gerät vom Browser verarbeitet. Es werden keine Informationen an unsere Server gesendet. Ihre Messungen sind Ihre eigenen.
+        </p>
+      </div>
+  </div>
 
-    <div class="py-10 flex flex-row justify-center gap-6 text-slate-500 text-sm border-t border-slate-800">
-      <a href="../privacy.html" class="hover:text-cyan-400">Datenschutz</a>
-      <a href="../contact.html" class="hover:text-cyan-400">Kontakt</a>
-      <a href="../aboutus.html" class="hover:text-cyan-400">Über</a>
+    <div class="footer-links">
+      <a href="../privacy.html" class="footer-link">Datenschutz</a>
+      <a href="../contact.html" class="footer-link">Kontakt</a>
+      <a href="../aboutus.html" class="footer-link">Über</a>
     </div>
   </div>
 
-  <div id="my-ad-container" class = "z-10 flex border h-[15dvh]" style="width: 100%; text-align: center;">
+  <div id="my-ad-container" style="width: 100%; text-align: center;">
       <ins class="adsbygoogle"
           style="display:block"
           data-ad-client="ca-pub-5227302043053716"
@@ -97,37 +128,34 @@
       </script>
   </div>
 
-  <div id="settings-panel" class="hidden fixed inset-0 bg-slate-900 bg-opacity-80 flex justify-center items-center">
+  <div id="settings-panel" class = "hidden">
     <div class="settings-panel-card">
-        <div class="flex justify-between items-center mb-4">
-            <h2 class="text-xl font-bold">Einstellungen</h2>
-            <button id="close-settings-btn" class="p-2 rounded-full hover:bg-slate-700">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        <div class="settings-header">
+            <h2 class="settings-title">Einstellungen</h2>
+            <button id="close-settings-btn" class="close-settings-button">
+                <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
         </div>
-        <div class="space-y-4">
+        <div class="settings-options">
             <!-- Audio Toggle -->
-            <div class="flex justify-between items-center">
-                <label for="audio-toggle" class="text-slate-300">Audio-Feedback</label>
-                <button id="audio-toggle" class="w-12 h-6 flex items-center rounded-full px-1 bg-slate-700">
-                    <span class="w-4 h-4 rounded-full bg-white transform transition-transform"></span>
+            <div class="settings-option">
+                <label for="audio-toggle" class="settings-label">Audio-Feedback</label>
+                <button id="audio-toggle">
+                    <span></span>
                 </button>
             </div>
-            <!-- Unit Selection -->
-            <div class="flex justify-between items-center">
-                <label for="unit-select" class="text-slate-300">Einheit</label>
-                <select id="unit-select" class="form-select">
-                    <option value="degrees">Grad (°)</option>
-                    <option value="percent">Prozent (%)</option>
-                </select>
-            </div>
+
             <!-- Language Selection -->
-            <div class="flex justify-between items-center">
-                <label for="lang-select" class="text-slate-300">Sprache</label>
-                <select id="lang-select" class="form-select">
-                    <option value="en">Englisch</option>
-                    <option value="de">Deutsch</option>
-                </select>
+            <div class="settings-option">
+                <label for="lang-select" class="settings-label">Sprache</label>
+                <div class="dropdown-wrapper">
+                    <div class="form-select dropdown-trigger">Deutsch</div>
+                    
+                    <div class="dropdown-content">
+                        <a href="https://online-inclinometer.com">English</a>
+                        <a href="https://online-inclinometer.com/de">Deutsch</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

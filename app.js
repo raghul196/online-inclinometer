@@ -9,8 +9,7 @@ const settingsBtn = document.getElementById('settings-btn');
 const settingsPanel = document.getElementById('settings-panel');
 const closeSettingsBtn = document.getElementById('close-settings-btn');
 const audioToggle = document.getElementById('audio-toggle');
-const unitSelect = document.getElementById('unit-select');
-const langSelect = document.getElementById('lang-select');
+
 
 
 let pitchOffset = 0;
@@ -178,27 +177,3 @@ audioToggle.addEventListener('click', () => {
     }
 });
 
-unitSelect.addEventListener('change', (e) => {
-    currentUnit = e.target.value;
-    // Force a UI update to reflect the new unit immediately if measuring
-    if (isMeasuring && lastPitch !== null && lastRoll !== null) {
-        handleOrientation({ beta: lastPitch, gamma: lastRoll });
-    }
-});
-
-settingsPanel.addEventListener('click', (e) => {
-    if (e.target === settingsPanel) {
-        settingsPanel.classList.add('hidden');
-    }
-});
-
-langSelect.addEventListener('change', (e) => {
-    const selectedLang = e.target.value;
-    const currentPath = window.location.pathname;
-
-    if (selectedLang === 'en' && currentPath.startsWith('/de/')) {
-        window.location.href = '/';
-    } else if (selectedLang === 'de' && !currentPath.startsWith('/de/')) {
-        window.location.href = '/de/';
-    }
-});
