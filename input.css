@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@layer components {
+  .app-body {
+    @apply bg-slate-900 h-[100dvh] text-white flex flex-col font-sans;
+  }
+
+  .app-header {
+    @apply flex h-[10dvh] items-center p-6;
+  }
+
+  .settings-button {
+    @apply p-2 rounded-full hover:bg-slate-800;
+  }
+
+  .settings-panel-card {
+    @apply bg-slate-800 rounded-lg shadow-xl p-6 w-full max-w-sm;
+  }
+
+  .form-select {
+    @apply bg-slate-700 text-white rounded-md p-1;
+  }
+}

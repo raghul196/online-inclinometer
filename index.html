@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href = "./logo.png" />
   <title>Online Inclinometer | Measure Surface Angles with your Mobile device</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="output.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5227302043053716"
      crossorigin="anonymous"></script>
   <meta name="description" content="Measure surface angles (pitch and roll) online for free with your mobile device browser without any further installation. Perfect for Solar PV installation, leveling, construction, and DIY projects.">
@@ -18,10 +18,14 @@
 
 </head>
 
-<body class="bg-slate-900 h-[100dvh]  text-white flex flex-col  font-sans">  
+<body class="app-body">  
 
-  <header class="flex h-[10dvh] justify-center p-6">
-    <h1 class="text-3xl font-bold tracking-tight">Online Inclinometer</h1>
+  <header class="app-header group relative">
+    <div class="w-8"></div> <!-- placeholder -->
+    <h1 class="text-3xl font-bold tracking-tight">Inclinometer</h1>
+    <button id="settings-btn" class="settings-button absolute right-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+    </button>
   </header>
 
   <div class = "h-[75dvh] overflow-hidden overflow-y-auto">
@@ -31,7 +35,7 @@
       </div>
 
       <div class="group relative mb-6 w-64 h-64 bg-slate-800 rounded-full border-4 border-slate-700 flex items-center justify-center shadow-2xl">        
-        <div id="bubble" class="w-12 h-12 bg-cyan-500 rounded-full opacity-80 transition-transform duration-75 ease-out shadow-[0_0_20px_rgba(6,182,212,0.5)]">
+        <div id="bubble" class="w-12 h-12 bg-cyan-500 rounded-full opacity-80 transition-transform duration-75 ease-in-out shadow-[0_0_20px_rgba(6,182,212,0.5)]">
         </div>
         <div class="absolute w-4 h-4 border-2 border-cyan-500 rounded-full"></div>
       </div>
@@ -93,106 +97,41 @@
       </script>
   </div>
 
-  <script>
-      // Utilizing your stored configuration for initialization
-      const bubble = document.getElementById('bubble');
-      const pitchVal = document.getElementById('pitch-val');
-      const rollVal = document.getElementById('roll-val');
-      const startBtn = document.getElementById('start-btn');
-      const stopBtn = document.getElementById('stop-btn');
-      const zeroBtn = document.getElementById('zero-btn');
-
-      let pitchOffset = 0;
-      let rollOffset = 0;
-      let lastPitch = 0;
-      let lastRoll = 0;
-      let isMeasuring = false;
-      let zeroOnStart = false;
-
-      function handleOrientation(event) {
-          if (zeroOnStart) {
-            pitchOffset = event.beta;
-            rollOffset = event.gamma;
-            zeroOnStart = false;
-          }
-
-          lastPitch = event.beta;
-          lastRoll = event.gamma;
-          
-          // Beta: front-back tilt (-180 to 180)
-          // Gamma: left-right tilt (-90 to 90)
-          let x = lastPitch - pitchOffset; 
-          let y = lastRoll - rollOffset;
-
-          // Constrain values for visual bubble
-          const maxTilt = 20;
-          const multiplier = 5; // Scale movement
-
-          // Update UI
-          pitchVal.innerText = `${Math.round(x)}°`;
-          rollVal.innerText = `${Math.round(y)}°`;
-
-          // Move bubble (X and Y are swapped for intuitive flat surface mapping)
-          const moveX = Math.max(Math.min(y * multiplier, 100), -100);
-          const moveY = Math.max(Math.min(x * multiplier, 100), -100);
-          
-          bubble.style.transform = `translate(${moveX}px, ${moveY}px)`;
-          
-          // Visual feedback when level
-          if (Math.abs(x) < 1 && Math.abs(y) < 1) {
-              bubble.classList.replace('bg-cyan-500', 'bg-green-500');
-          } else {
-              bubble.classList.replace('bg-green-500', 'bg-cyan-500');
-          }
-      }
-
-      zeroBtn.addEventListener('click', () => {
-          if (isMeasuring) {
-              pitchOffset = lastPitch;
-              rollOffset = lastRoll;
-          } else {
-              pitchVal.innerText = '0°';
-              rollVal.innerText = '0°';
-              zeroOnStart = true;
-          }
-      });
-
-      startBtn.addEventListener('click', async () => {
-          // Request permission for iOS 13+ devices
-        pitchVal.classList.remove('text-cyan-400');
-        rollVal.classList.remove('text-cyan-400');
-          
-          if (typeof DeviceOrientationEvent.requestPermission === 'function') {
-              try {
-                  const permission = await DeviceOrientationEvent.requestPermission();
-                  if (permission === 'granted') {
-                      window.addEventListener('deviceorientation', handleOrientation);
-                      startBtn.classList.add('hidden');
-                      stopBtn.classList.remove('hidden');
-                      isMeasuring = true;
-                      
-                  }
-              } catch (err) {
-                  console.error("Permission denied");
-              }
-          } else {
-              // Non-iOS or older devices
-              window.addEventListener('deviceorientation', handleOrientation);
-              startBtn.classList.add('hidden');
-              stopBtn.classList.remove('hidden');
-              isMeasuring = true;
-          }
-      });
-      stopBtn.addEventListener('click', ()=>{
-        window.removeEventListener('deviceorientation', handleOrientation);
-        startBtn.classList.remove('hidden');
-        stopBtn.classList.add('hidden');
-        pitchVal.classList.add('text-cyan-400');
-        rollVal.classList.add('text-cyan-400');
-        isMeasuring = false;
-        zeroOnStart = false;
-      });
-      
-  </script>
+  <div id="settings-panel" class="hidden fixed inset-0 bg-slate-900 bg-opacity-80 flex justify-center items-center">
+    <div class="settings-panel-card">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold">Settings</h2>
+            <button id="close-settings-btn" class="p-2 rounded-full hover:bg-slate-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div class="space-y-4">
+            <!-- Audio Toggle -->
+            <div class="flex justify-between items-center">
+                <label for="audio-toggle" class="text-slate-300">Audio Feedback</label>
+                <button id="audio-toggle" class="w-12 h-6 flex items-center rounded-full px-1 bg-slate-700">
+                    <span class="w-4 h-4 rounded-full bg-white transform transition-transform"></span>
+                </button>
+            </div>
+            <!-- Unit Selection -->
+            <div class="flex justify-between items-center">
+                <label for="unit-select" class="text-slate-300">Unit</label>
+                <select id="unit-select" class="form-select">
+                    <option value="degrees">Degrees (°)</option>
+                    <option value="percent">Percent (%)</option>
+                </select>
+            </div>
+            <!-- Language Selection -->
+            <div class="flex justify-between items-center">
+                <label for="lang-select" class="text-slate-300">Language</label>
+                <select id="lang-select" class="form-select">
+                    <option value="en">English</option>
+                    <option value="de">Deutsch</option>
+                </select>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script src="app.js" defer></script>
 </body>
 </html>
