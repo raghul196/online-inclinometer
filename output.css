@@ -254,12 +254,15 @@
     padding: calc(var(--spacing) * 6);
   }
   .main-title {
+    padding-left: calc(var(--spacing) * 2);
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
     --tw-tracking: var(--tracking-tight);
     letter-spacing: var(--tracking-tight);
+    :is(& *) {
+      --tw-font-weight: var(--font-weight-bold);
+      font-weight: var(--font-weight-bold);
+    }
   }
   .main-title-de {
     font-size: var(--text-2xl);
@@ -709,11 +712,11 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-font-weight {
+@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
-@property --tw-tracking {
+@property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
@@ -811,8 +814,8 @@
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
-      --tw-font-weight: initial;
       --tw-tracking: initial;
+      --tw-font-weight: initial;
       --tw-border-style: solid;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
