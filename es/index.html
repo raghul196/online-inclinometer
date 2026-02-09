@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href = "../logo.png" />
+  <title>Inclinómetro Online | Mida ángulos de superficie con su dispositivo móvil</title>
+  <link rel="stylesheet" href="../output.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5227302043053716"
+     crossorigin="anonymous"></script>
+  <meta name="description" content="Mida ángulos de superficie (cabeceo y balanceo) en línea de forma gratuita con el navegador de su dispositivo móvil sin ninguna instalación adicional. Perfecto para la instalación de paneles solares fotovoltaicos, nivelación, construcción y proyectos de bricolaje.">
+  <meta property="og:title" content="Inclinómetro Online | Mida ángulos de superficie con su dispositivo móvil" />
+  <meta property="og:description" content="Mida ángulos de superficie (cabeceo y balanceo) en línea de forma gratuita con el navegador de su dispositivo móvil sin ninguna instalación adicional. Perfecto para la instalación de paneles solares fotovoltaicos, nivelación, construcción y proyectos de bricolaje." />
+  <meta property="og:url" content="https://online-inclinometer.com/es/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://online-inclinometer.com/logo.png" />
+  <meta property="og:site_name" content="Inclinómetro Online" />
+
+  <link rel="canonical" href="https://online-inclinometer.com/es/" />
+  <link rel="alternate" hreflang="en" href="https://online-inclinometer.com/" />
+  <link rel="alternate" hreflang="de" href="https://online-inclinometer.com/de/" />
+  <link rel="alternate" hreflang="es" href="https://online-inclinometer.com/es/" />
+  <!-- <link rel="alternate" hreflang="fr" href="https://online-inclinometer.com/fr/" />
+  <link rel="alternate" hreflang="it" href="https://online-inclinometer.com/it/" /> -->
+  <link rel="alternate" hreflang="x-default" href="https://online-inclinometer.com/" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Inclinómetro Online",
+      "applicationCategory": "Tool",
+      "operatingSystem": "Any",
+      "description": "Una herramienta gratuita en línea para medir ángulos de superficie (cabeceo y balanceo) utilizando el navegador de su dispositivo móvil. Ideal para diversas tareas como la instalación de paneles solares, construcción y proyectos de bricolaje.",
+      "author": {
+        "@type": "Organization",
+        "name": "Online Inclinometer"
+      },
+      "url": "https://online-inclinometer.com/es/",
+      "image": "https://online-inclinometer.com/logo.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0"
+      }
+    }
+    </script>
+</head>
+
+<body class="app-body">  
+
+  <header class="app-header">
+    <div class="placeholder"><img src = "../logo.png" /></div> <!-- placeholder -->
+    <h1 class="main-title">Inclinómetro</h1>
+    <button id="settings-btn" class="settings-button">
+      <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+    </button>
+  </header>
+
+  <div class="main-content-area">
+    <div class="inclinometer-container">
+      <div class="instruction-text-container">
+        <p class="instruction-text">Coloque el dispositivo plano sobre la superficie</p>
+      </div>
+
+      <div class="bubble-container-background">        
+        <div id="bubble">
+        </div>
+        <div class="bubble-center-mark"></div>
+      </div>
+
+      <div class="readout-grid">
+        <div class="readout-box">
+          <span class="readout-label">Cabeceo (X)</span>
+          <span id="pitch-val" class="readout-value">-°</span>
+        </div>
+        <div class="readout-box">
+          <span class="readout-label">Balanceo (Y)</span>
+          <span id="roll-val" class="readout-value">-°</span>
+        </div>
+      </div>
+
+      <div class="button-container">
+          <button id="zero-btn" class="zero-button">
+            Cero
+          </button>
+          <button id="start-btn" class="control-button">
+              Comenzar a medir
+          </button>
+          <button id="stop-btn" class="control-button hidden">
+              Dejar de medir
+          </button>
+      </div>
+    </div>
+
+    <div class="promo-banner">
+      <span class="promo-text">¿Trabajando en un proyecto solar?</span>
+      <div class="promo-divider"></div>
+      <a href="https://pvfreund.com/?lang=es" 
+        class="promo-link">
+        Pruebe nuestra herramienta gratuita de diseño fotovoltaico en <strong class="promo-link-strong">PV Freund</strong> 
+      </a>
+    </div>
+
+    <div class="how-it-works-section">
+      <h2 class="section-title">Cómo funciona nuestro inclinómetro en línea</h2>
+      <p class="section-intro">
+        Este inclinómetro en línea es una aplicación web diseñada para medir ángulos de superficie con alta precisión, utilizando los sensores ya integrados en su teléfono inteligente o tableta. Transforma su dispositivo en un potente nivel de burbuja digital, nivel de burbuja o clinómetro sin necesidad de instalar ningún software. Todo se ejecuta directamente en su navegador web.
+      </p>
+      <div class="section-grid">
+        <div>
+          <h3 class="subsection-title">Funcionalidad principal</h3>
+          <ul class="feature-list">
+            <li><strong>Medición en tiempo real:</strong> Una vez que otorga acceso al sensor y presiona 'Comenzar', la aplicación lee datos del acelerómetro y giroscopio de su dispositivo para calcular los ángulos de cabeceo (eje X) y balanceo (eje Y) en tiempo real.</li>
+            <li><strong>Nivel de burbuja de alta precisión:</strong> La interfaz gráfica central presenta una burbuja virtual que se mueve según la inclinación del dispositivo, proporcionando una guía visual intuitiva para lograr un nivel perfecto.</li>
+            <li><strong>Calibración a cero:</strong> El botón 'Cero' le permite establecer cualquier superficie como punto de reference. Esto es útil para medir el ángulo de una superficie en relación con otra, en lugar de un nivel absoluto.</li>
+            <li><strong>Conversión de unidades:</strong> En el panel de configuración, puede cambiar entre medir en grados (°) y porcentaje (%).</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="subsection-title">Casos de uso comunes</h3>
+          <p class="paragraph-margin">Esta herramienta es perfecta para una amplia gama de tareas, que incluyen:</p>
+          <ul class="feature-list">
+            <li><strong>Construcción y carpintería:</strong> Asegurarse de que las paredes estén a plomo, los pisos estén nivelados y las vigas estén instaladas en el ángulo correcto.</li>
+            <li><strong>Instalación de paneles solares:</strong> Optimice la generación de energía configurando los paneles fotovoltaicos en el ángulo de inclinación preciso para su ubicación.</li>
+            <li><strong>Proyectos de bricolaje:</strong> Colgar cuadros, instalar estantes o ensamblar muebles con una alineación perfecta.</li>
+            <li><strong>Fotografía y videografía:</strong> Nivelar su cámara para obtener horizontes perfectamente rectos en sus tomas.</li>
+            <li><strong>Mantenimiento de vehículos:</strong> Comprobar el ángulo de los componentes para la alineación o durante las reparaciones.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-outro">
+        <h3 class="subsection-title">100% privado y seguro</h3>
+        <p>
+          Estamos comprometidos con su privacidad. Todos los datos de los sensores se procesan directamente en su dispositivo mediante el navegador. Nunca se envía información a nuestros servidores. Sus medidas son suyas.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="../privacy.html" class="footer-link">Privacidad</a>
+      <a href="../contact.html" class="footer-link">Contacto</a>
+      <a href="../aboutus.html" class="footer-link">Sobre nosotros</a>
+    </div>
+  </div>
+
+  <div id="my-ad-container" style="width: 100%; text-align: center;">
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-5227302043053716"
+          data-ad-slot="5913698152"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+  </div>
+
+  <div id="settings-panel" class = "hidden">
+    <div class="settings-panel-card">
+        <div class="settings-header">
+            <h2 class="settings-title">Configuraciones</h2>
+            <button id="close-settings-btn" class="close-settings-button">
+                <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div class="settings-options">
+            <!-- Audio Toggle -->
+            <div class="settings-option">
+                <label for="audio-toggle" class="settings-label">Retroalimentación de audio</label>
+                <button id="audio-toggle">
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Language Selection -->
+            <div class="settings-option">
+                <label for="lang-select" class="settings-label">Idioma</label>
+                <div class="dropdown-wrapper">
+                    <div class="form-select dropdown-trigger">Español</div>
+                    
+                    <div class="dropdown-content">
+                        <a href="https://online-inclinometer.com">English</a>
+                        <a href="https://online-inclinometer.com/de">Deutsch</a>
+                        <a href="https://online-inclinometer.com/es">Español</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script src="../app.js" defer></script>
+</body>
+</html>
