@@ -192,6 +192,30 @@
   .form-select {
     @apply bg-slate-700 text-white rounded-md p-1;
   }
+
+  .accuracy-section {
+    @apply max-w-3xl mx-auto mt-8;
+  }
+
+  .accuracy-image-container {
+    @apply my-6 bg-slate-800 rounded-lg p-4 border border-slate-700;
+  }
+  
+  .accuracy-image {
+    @apply w-full h-auto;
+  }
+
+  .image-caption {
+    @apply text-center text-xs text-slate-500 mt-2;
+  }
+
+  .use-cases-section {
+    @apply max-w-3xl mx-auto mt-8;
+  }
+
+  .feature-list.list-decimal {
+    @apply list-decimal list-outside pl-5;
+  }
 }
 
 /* Container for the dropdown logic */

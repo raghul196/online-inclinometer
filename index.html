@@ -103,31 +103,237 @@
     </div>
 
     <div class="how-it-works-section">
-      <h2 class="section-title">How Our Online Inclinometer Works</h2>
+      <h2 class="section-title">How to Use This Online Inclinometer to Measure Angles</h2>
       <p class="section-intro">
-        This online inclinometer is a web-based application designed to measure surface angles with high precision, using the sensors already built into your smartphone or tablet. It transforms your device into a powerful digital spirit level, bubble level, or clinometer without requiring any software installation. Everything runs directly in your web browser.
+        This online inclinometer is a web-based application designed to measure surface angles (slope, pitch, and roll) with high precision, using the sensors already built into your smartphone or tablet. 
+        It transforms your device into a powerful digital spirit level, bubble level, or clinometer for free, without requiring any software installation. Everything runs directly in your web browser, 
+        making it easy to measure angles and slopes anywhere. Use it as a reliable tool to measure angle, measure slope, or check pitch and roll.
       </p>
+      
       <div class="section-grid">
         <div>
           <h3 class="subsection-title">Core Functionality</h3>
           <ul class="feature-list">
-            <li><strong>Real-time Measurement:</strong> Once you grant sensor access and press 'Start', the application reads data from your device's accelerometer and gyroscope to calculate the pitch (X-axis) and roll (Y-axis) angles in real-time.</li>
-            <li><strong>High-Precision Bubble Level:</strong> The central graphic interface features a virtual bubble that moves based on the device's tilt, providing an intuitive visual guide to achieving a perfect level.</li>
-            <li><strong>Zero Calibration:</strong> The 'Zero' button allows you to set any surface as a reference point. This is useful for measuring the angle of one surface relative to another, rather than to absolute level.</li>
+            <li><strong>Real-time Angle Measurement:</strong> Once you grant sensor access and press <i>Start</i>, the application reads data from your device's accelerometer and gyroscope to calculate the pitch 
+              (X-axis) and roll (Y-axis) angles in real-time. This provides an instant angle measurement and slope measurement.</li>
+            <li><strong>High-Precision Bubble Level:</strong> The central graphic interface features a virtual bubble that moves based on the device's tilt, providing an intuitive visual guide to 
+              achieving a perfect level. It's a free inclinometer in your browser.</li>
+            <li><strong>Zero Calibration:</strong> The <i> Zero</i> button allows you to set any surface as a reference point (0 degrees). This is useful for measuring the angle of one surface relative to another, 
+              rather than to absolute level. A perfect feature for any angle in browser tool. I can also used to adjust for bumps in your mobile devices like protruding cameras</li>
+            <li><strong>Viewless Levelling:</strong> Activate audio feedback in settings, and your device will beep when a perfect level is achieved, allowing you to level surfaces without constantly 
+              monitoring the screen.</li>
           </ul>
         </div>
         <div>
-          <h3 class="subsection-title">Common Use Cases</h3>
-          <p class="paragraph-margin">This tool is perfect for a wide range of tasks, including:</p>
-          <ul class="feature-list">
-            <li><strong>Construction & Carpentry:</strong> Ensuring walls are plumb, floors are level, and beams are installed at the correct angle.</li>
-            <li><strong>Solar Panel Installation:</strong> Optimizing energy generation by setting PV panels to the precise tilt angle for your location.</li>
-            <li><strong>DIY Projects:</strong> Hanging picture frames, installing shelves, or assembling furniture with perfect alignment.</li>
-            <li><strong>Photography & Videography:</strong> Leveling your camera for perfectly straight horizons in your shots.</li>
-            <li><strong>Vehicle Maintenance:</strong> Checking the angle of components for alignment or during repairs.</li>
-          </ul>
+          <h3 class="subsection-title">Disclaimer: Understanding Accuracy</h3>
+          <p class="paragraph-margin">
+            Please be aware that while this tool offers a convenient way to measure slope, the sensors in a typical smartphone are not designed for metrology-grade angle measurement. 
+            Factors like sensor quality, device calibration, and even small bumps on your phone's case can introduce errors. For many DIY and hobbyist tasks, the accuracy is more than sufficient. 
+            However, for professional applications requiring certified precision, a dedicated, calibrated spirit level is recommended. This tool provides a reliable angle measure for most everyday needs.
+          </p>
         </div>
       </div>
+
+      <div class="accuracy-section">
+        <h3 class="subsection-title">How to Improve Measurement Accuracy</h3>
+        <p class="paragraph-margin">
+          You can significantly improve the accuracy of your slope measurement and compensate for sensor bias by using a simple two-step calibration method. 
+          This process effectively cancels out most of the phone's inherent zero-offset error when you need to measure an angle with better precision.
+        </p>
+        <ol class="feature-list list-decimal">
+          <li><strong>First Measurement:</strong> Place your phone on the surface you want to measure and note the angle reading (e.g. 8°).</li>
+          <li><strong>Second Measurement:</strong> Without lifting it, rotate your phone exactly 180° in the same spot (so it's "head-to-head" with its original position) and take a second reading (e.g. 10°).</li>
+          <li><strong>Calculate the True Angle:</strong> The true angle is the average of these two measurements. For example: (8 + 10) / 2 = 9°. This is your more accurate slope in browser.</li>
+        </ol>
+        <div class="accuracy-image-container">
+          <svg width="100%" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"></path>
+              </marker>
+              <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+                <feOffset dx="1" dy="1" />
+                <feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer>
+                <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
+            </defs>
+
+            <path d="M 20,180 L 100,100 L 380,100 L 300,180 Z" fill="#334155" stroke="#64748b" stroke-width="2"/>
+            <text x="200" y="200" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="bold" style="letter-spacing: 1px;">SURFACE TO MEASURE</text>
+
+            <g transform="translate(120, 140)" filter="url(#shadow)">
+              <rect x="-30" y="-45" width="60" height="90" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+              <rect x="-26" y="-38" width="52" height="76" rx="2" fill="#0f172a" />
+              <circle cx="0" cy="-41" r="2" fill="#334155"/>
+              <text x="0" y="5" fill="#38bdf8" font-family="sans-serif" font-size="10" text-anchor="middle">A</text>
+            </g>
+
+            <g transform="translate(280, 140)" filter="url(#shadow)">
+              <g transform="rotate(180)">
+                <rect x="-30" y="-45" width="60" height="90" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+                <rect x="-26" y="-38" width="52" height="76" rx="2" fill="#0f172a" />
+                <circle cx="0" cy="-41" r="2" fill="#334155"/>
+              </g>
+              <text x="0" y="5" fill="#38bdf8" font-family="sans-serif" font-size="10" text-anchor="middle">B</text>
+            </g>
+
+            <path d="M 150,100 Q 200,30 250,100" stroke="#38bdf8" stroke-width="2" fill="none" stroke-dasharray="4" marker-end="url(#arrow)"/>
+            <text x="200" y="50" fill="#e2e8f0" font-family="sans-serif" font-size="11" text-anchor="middle">Rotate 180° on Surface</text>
+
+            <text x="100" y="90" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">1. Take reading</text>
+            <text x="320" y="90" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">2. Flip & avg. results</text>
+          </svg>
+          <p class="image-caption">Use the 180° rotation method to cancel out sensor errors and achieve a more accurate angle measurements.</p>
+        </div>
+      </div>
+      
+      <div class="zero-calibration-section">
+        <h3 class="subsection-title">How to Perform "Zero" Calibration</h3>
+        <p class="paragraph-margin">
+            Zero calibration allows you to set your current surface as the new reference point (0 degrees), which is essential for measuring relative angles or compensating for uneven surfaces. 
+            This is how you do it:
+        </p>
+        <ol class="feature-list list-decimal">
+            <li><strong>Place Device:</strong> Lay your smartphone or tablet firmly on the surface you wish to designate as your 0° reference.</li>
+            <li><strong>Stabilize:</strong> Ensure your device is stable and not moving.</li>
+            <li><strong>Press Zero:</strong> Tap the <strong>Zero</strong> button on the inclinometer interface.</li>
+            <li><strong>New Baseline:</strong> The current pitch and roll readings will instantly reset to 0°, establishing this orientation as your new baseline for all subsequent measurements.</li>
+        </ol>
+
+        <div class="zero-calibration-image-container accuracy-image-container">
+            <svg width="100%" viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"></path>
+                </marker>
+                <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+                  <feOffset dx="1" dy="2" />
+                  <feComponentTransfer><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
+                  <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
+              </defs>
+
+              <line x1="40" y1="280" x2="460" y2="280" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6,4"/>
+              <text x="250" y="305" fill="#64748b" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">TRUE EARTH-PARALLEL HORIZONTAL</text>
+
+              <g transform="translate(40, 180) rotate(-5)">
+                <path d="M 0,60 L 40,0 L 200,0 L 160,60 Z" fill="#334155" fill-opacity="0.9" stroke="#64748b" stroke-width="1.5"/>
+                <text x="100" y="90" fill="#e2e8f0" font-family="sans-serif" font-size="14" text-anchor="middle" transform="rotate(5, 100, 80)">Reference Surface (5°)</text>
+                
+                <g transform="translate(100, 30) rotate(5)" filter="url(#shadow)">
+                  <rect x="-25" y="-40" width="50" height="80" rx="5" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+                  <rect x="-21" y="-32" width="42" height="64" rx="2" fill="#0f172a" />
+                  <circle cx="0" cy="-36" r="1.5" fill="#334155"/>
+                  <text x="0" y="5" fill="#fbbf24" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">0°</text>
+                  <text x="0" y="18" fill="#fbbf24" font-family="sans-serif" font-size="10" text-anchor="middle">Zeroed</text>
+                </g>
+              </g>
+
+              <g transform="translate(280, 160) rotate(-15)">
+                <path d="M 0,60 L 40,0 L 200,0 L 160,60 Z" fill="#334155" fill-opacity="0.9" stroke="#64748b" stroke-width="1.5"/>
+                <text x="100" y="90" fill="#e2e8f0" font-family="sans-serif" font-size="14" text-anchor="middle" transform="rotate(15, 100, 80)">Target Surface (15°)</text>
+
+                <g transform="translate(100, 30) rotate(15)" filter="url(#shadow)">
+                  <rect x="-25" y="-40" width="50" height="80" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+                  <rect x="-21" y="-32" width="42" height="64" rx="2" fill="#0f172a" />
+                  <circle cx="0" cy="-36" r="1.5" fill="#334155"/>
+                  <text x="0" y="5" fill="#38bdf8" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">10°</text>
+
+                </g>
+              </g>
+
+              <path d="M 180,150 Q 250,100 320,130" stroke="#38bdf8" stroke-width="2" fill="none" stroke-dasharray="4" marker-end="url(#arrow)"/>
+              <text x="250" y="95" fill="#e2e8f0" font-family="sans-serif" font-size="14" text-anchor="middle">Transfer device to measure slope difference</text>
+              
+              <text x="140" y="45" fill="#fbbf24" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">STEP 1: Set Reference</text>
+              <text x="380" y="45" fill="#38bdf8" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">STEP 2: Measure Angle</text>
+            </svg>
+            <p class="image-caption">Zero calibration sets the current surface as the 0° reference, allowing for relative angle measurements.</p>
+        </div>
+      </div>
+      
+      <div class="camera-adjustment-section">
+        <h3 class="subsection-title">Adjusting for Protruding Cameras</h3>
+        <p class="paragraph-margin">
+          Modern smartphones often have camera bumps that prevent them from lying perfectly flat. This can interfere with accurate measurements, but you can easily correct for it using the <strong>Zero</strong> button, as illustrated below.
+        </p>
+        <ol class="feature-list list-decimal">
+          <li><strong>Place and Observe:</strong> Position your phone on the surface. Notice that the camera bump creates a slight, stable tilt, showing a non-zero reading.</li>
+          <li><strong>Press Zero:</strong> Tap the <strong>Zero</strong> button. This instructs the inclinometer to treat the phone's current tilted position as the new "0°" reference point.</li>
+          <li><strong>Measure Accurately:</strong> The display will now read 0°. The effect of the camera bump is cancelled out, allowing you to take accurate measurements relative to the surface.</li>
+        </ol>
+        <div class="accuracy-image-container">
+            <svg width="100%" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"></path>
+                </marker>
+              </defs>
+
+              <g transform="translate(50, 150)">
+                <rect x="0" y="50" width="160" height="8" fill="#334155" stroke="#475569"/>
+                
+                <g > 
+                  <rect x="20" y="36" width="120" height="8" transform="rotate(-5, 80, 36)" rx="2" fill="#1e293b" stroke="#94a3b8"/>
+                  <rect x="105" y="44" width="30" height="8" fill="#94a3b8" transform="rotate(-5, 80, 38)" />
+                  <text x="80" y="34" fill="#fbbf24" font-family="sans-serif" font-size="14" text-anchor="middle">5°</text>
+                </g>
+                <text x="80" y="-100" fill="#fbbf24" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">1. Error from Camera</text>
+                <text x="80" y="85" fill="#94a3b8" font-family="sans-serif" font-size="13" text-anchor="middle">Device reads tilt on flat surface</text>
+              </g>
+
+              <path d="M 190,150 Q 250,100 310,150" stroke="#38bdf8" stroke-width="2" fill="none" stroke-dasharray="4" marker-end="url(#arrow)"/>
+              <text x="250" y="110" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle" font-weight="bold">PRESS "ZERO"</text>
+
+              <g transform="translate(290, 150)">
+                <rect x="0" y="50" width="160" height="8" fill="#334155" stroke="#475569"/>
+                
+                <g > 
+                  <rect x="20" y="36" width="120" height="8" transform="rotate(-5, 80, 36)" rx="2" fill="#1e293b" stroke="#94a3b8"/>
+                  <rect x="105" y="44" width="30" height="8" fill="#94a3b8" transform="rotate(-5, 80, 38)" />
+                  <text x="80" y="34" fill="#38bdf8" font-family="sans-serif" font-size="14" text-anchor="middle">0°</text>
+                </g>
+                <text x="80" y="-100" fill="#38bdf8" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">2. Offset Calibrated</text>
+                <text x="80" y="85" fill="#94a3b8" font-family="sans-serif" font-size="13" text-anchor="middle">Bump is now ignored</text>
+              </g>
+            </svg>
+            <p class="image-caption">Use "Zero" to compensate for the tilt caused by a camera bump.</p>
+        </div>
+      </div>
+
+      <div class="use-cases-section">
+        <h3 class="subsection-title">Detailed Use Cases for Our Inclinometer</h3>
+        <p class="paragraph-margin">This browser-based inclinometer is a versatile tool to measure pitch and roll for many tasks:</p>
+        <ul class="feature-list space-y-4">
+          <li>
+            <strong>Construction & Carpentry:</strong>
+            Use this clinometer to ensure walls are perfectly vertical and floors are level. When framing a roof, measure the pitch to ensure rafters are cut and installed at the correct angle. It's also great for setting the proper slope for drainage on patios or walkways.
+          </li>
+          <li>
+            <strong>Solar Panel Installation:</strong>
+            To maximize energy generation, solar panels must be set at an optimal tilt angle based on latitude and season. Use this tool to measure pitch precisely during installation, ensuring your panels have the correct orientation to the sun for peak efficiency.
+          </li>
+          <li>
+            <strong>DIY & Home Improvement:</strong>
+            Hang picture frames perfectly straight every time. When assembling furniture or installing kitchen cabinets, use the inclinometer to ensure everything is level. It is also the perfect tool to measure slope when setting up appliances like washing machines to prevent imbalance and vibration.
+          </li>
+          <li>
+            <strong>Photography & Videography:</strong>
+            Avoid skewed horizons by using this tool to level your camera on a tripod. This is especially critical for landscape, architectural, and panoramic photography where straight lines are essential for a professional result.
+          </li>
+          <li>
+            <strong>Vehicle & RV Leveling:</strong>
+            Check driveline angles after modifying a vehicle's suspension. When camping, use it to level your caravan or RV for comfort and to ensure appliances (like refrigerators) function correctly. It's a handy slope measure tool for any vehicle setup.
+          </li>
+           <li>
+            <strong>Plumbing and Drainage:</strong>
+            When installing drainage pipes, a consistent, gentle slope is crucial for proper flow. Use this online inclinometer to measure the angle precisely and prevent issues with blockages or standing water in the future.
+          </li>
+        </ul>
+      </div>
+
       <div class="section-outro">
         <h3 class="subsection-title">100% Private and Secure</h3>
         <p>
