@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- English Main Page -->
+  <url>
+    <loc>https://online-inclinometer.com/</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://online-inclinometer.com/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://online-inclinometer.com/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://online-inclinometer.com/es/" />
+  </url>
+
+  <!-- German Version -->
+  <url>
+    <loc>https://online-inclinometer.com/de/</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://online-inclinometer.com/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://online-inclinometer.com/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://online-inclinometer.com/es/" />
+  </url>
+
+  <!-- Spanish Version -->
+  <url>
+    <loc>https://online-inclinometer.com/es/</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://online-inclinometer.com/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://online-inclinometer.com/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://online-inclinometer.com/es/" />
+  </url>
+
+  <!-- Privacy Page -->
+  <url>
+    <loc>https://online-inclinometer.com/privacy.html</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://online-inclinometer.com/contact.html</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://online-inclinometer.com/aboutus.html</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

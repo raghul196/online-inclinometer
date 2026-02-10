@@ -1,0 +1,18 @@
+# Robots.txt for Online Inclinometer
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+Disallow: /settings.html
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+
+# Sitemap location
+Sitemap: https://online-inclinometer.com/sitemap.xml
+
+# Crawl delay (optional - in seconds)
+Crawl-delay: 1

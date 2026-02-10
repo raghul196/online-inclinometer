@@ -23,6 +23,7 @@
   <!-- <link rel="alternate" hreflang="fr" href="https://online-inclinometer.com/fr/" />
   <link rel="alternate" hreflang="it" href="https://online-inclinometer.com/it/" /> -->
   <link rel="alternate" hreflang="x-default" href="https://online-inclinometer.com/" />
+  <link rel="sitemap" type="application/xml" href="https://online-inclinometer.com/sitemap.xml" />
 
   <script type="application/ld+json">
     {
@@ -45,13 +46,65 @@
       }
     }
     </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I use this online inclinometer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Grant sensor access, press Start Measuring, and place your device on the surface. The inclinometer will display pitch (X-axis) and roll (Y-axis) angles in real-time. Use the Zero button to set a reference point."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate is this inclinometer tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The accuracy depends on your device's accelerometer quality. For DIY and hobby tasks, it's highly accurate. For professional metrology-grade precision, a dedicated calibrated spirit level is recommended. Use the 180° rotation calibration method for improved accuracy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data private and secure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all sensor data is processed directly on your device in your browser. No information is sent to our servers. Your measurements are completely private."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What can I use this inclinometer for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can use it for solar panel installation, construction, carpentry, DIY projects, photography, vehicle leveling, plumbing, and any task requiring angle or slope measurement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I compensate for my phone's camera bump?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Place your phone on the surface with the camera bump, note the reading, then press the Zero button. This calibrates out the camera bump effect, allowing accurate measurements."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body class="app-body">  
 
   <header class="app-header">
-    <div class="placeholder"><img src = "./logo.png" /></div> <!-- placeholder -->
-    <h1 class="main-title">Inclinometer</h1>
+    <div class="placeholder"><img src="./logo.png" alt="Online Inclinometer - Free angle measurement tool" /></div> <!-- placeholder -->
+    <div class = "pr-8">
+      <h1 class="main-title">Online Inclinometer</h1>
+      <h2 class = "pl-2"> Measure Angles Instantly for free</h3>
+    </div>
     <button id="settings-btn" class="settings-button">
       <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
     </button>
@@ -332,6 +385,62 @@
             When installing drainage pipes, a consistent, gentle slope is crucial for proper flow. Use this online inclinometer to measure the angle precisely and prevent issues with blockages or standing water in the future.
           </li>
         </ul>
+      </div>
+
+      <div class="faq-section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do I use this online inclinometer?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Grant sensor access, press Start Measuring, and place your device on the surface. The inclinometer will display pitch (X-axis) and roll (Y-axis) angles in real-time. Use the Zero button to set a reference point.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How accurate is this inclinometer tool?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </button>
+            <div class="faq-answer">
+              <p>The accuracy depends on your device's accelerometer quality. For DIY and hobby tasks, it's highly accurate. For professional metrology-grade precision, a dedicated calibrated spirit level is recommended. Use the 180° rotation calibration method for improved accuracy.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is my data private and secure?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, all sensor data is processed directly on your device in your browser. No information is sent to our servers. Your measurements are completely private.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What can I use this inclinometer for?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </button>
+            <div class="faq-answer">
+              <p>You can use it for solar panel installation, construction, carpentry, DIY projects, photography, vehicle leveling, plumbing, and any task requiring angle or slope measurement.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do I compensate for my phone's camera bump?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Place your phone on the surface with the camera bump, note the reading, then press the Zero button. This calibrates out the camera bump effect, allowing accurate measurements.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="section-outro">
