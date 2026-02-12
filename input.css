@@ -249,11 +249,11 @@
   }
 
   .faq-answer {
-    @apply px-6 py-4 text-sm text-slate-400 border-t border-slate-700/50 max-h-0 overflow-hidden transition-all duration-300 ease-in-out;
+    @apply  text-sm text-slate-400 border-t border-slate-700/50 max-h-0 overflow-hidden transition-all duration-300 ease-in-out;
   }
 
   .faq-item.active .faq-answer {
-    @apply max-h-96;
+    @apply max-h-96 px-6 py-4;
   }
 
   .faq-answer p {
