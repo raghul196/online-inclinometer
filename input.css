@@ -61,7 +61,7 @@
   }
 
   .readout-grid {
-    @apply px-6 grid grid-cols-2 gap-4 flex text-center justify-center w-full;
+    @apply px-6 grid grid-cols-2 gap-4 flex text-center justify-center w-full max-w-2xl;
   }
 
   .readout-box {
@@ -303,3 +303,13 @@
 .dropdown-trigger {
     padding-right: 25px; /* Space for the arrow */
 }
+.qr-container{
+  @apply
+    hidden sm:flex border border-slate-700 bg-slate-800
+    rounded-lg h-36 p-2 max-w-2xl mx-auto
+}
+.qr-text{
+  @apply
+    text-slate-300 px-2 pr-4 flex flex-col gap-4 justify-center
+}
+ 
