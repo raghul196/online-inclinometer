@@ -486,11 +486,13 @@
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--color-slate-800) 60%, transparent);
     }
+    padding-inline: calc(var(--spacing) * 6);
     padding-block: calc(var(--spacing) * 6);
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
   .promo-text {
+    text-align: center;
     color: var(--color-slate-500);
     font-style: italic;
   }
