@@ -95,7 +95,7 @@ function handleOrientation(event) {
     bubble.style.transform = `translate(${moveX}px, ${moveY}px)`;
     
     // Visual feedback when level
-    const currentlyLevel = Math.abs(x) < 1 && Math.abs(y) < 1;
+    const currentlyLevel = Math.round(x) == 0 && Math.round(y) == 0;
     if (currentlyLevel) {
         bubble.classList.replace('bg-cyan-500', 'bg-green-500');
         if (!isLevel) {
