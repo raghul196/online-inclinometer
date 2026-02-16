@@ -294,8 +294,8 @@
     background-color: #f1f1f1;
 }
 
-/* THE MAGIC: Show the menu on hover */
-.dropdown-wrapper:hover .dropdown-content {
+/* Show the menu when the wrapper has the 'active' class */
+.dropdown-wrapper.active .dropdown-content {
     display: block;
 }
 

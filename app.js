@@ -196,3 +196,26 @@ faqQuestions.forEach(question => {
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const dropdownWrapper = document.querySelector(".dropdown-wrapper");
+
+    if (dropdownWrapper) {
+        dropdownWrapper.addEventListener("click", (event) => {
+            // We only want to toggle if the click is on the trigger itself,
+            // not on the links inside the dropdown content.
+            if (event.target.classList.contains("dropdown-trigger")) {
+                dropdownWrapper.classList.toggle("active");
+            }
+        });
+
+        // Close dropdown when clicking outside of it
+        window.addEventListener("click", (event) => {
+            // Check if the wrapper is active and the click is outside the wrapper
+            if (dropdownWrapper.classList.contains("active") && !dropdownWrapper.contains(event.target)) {
+                dropdownWrapper.classList.remove("active");
+            }
+        });
+    }
+});
+
