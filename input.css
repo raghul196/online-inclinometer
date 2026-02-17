@@ -153,11 +153,11 @@
   }
 
   #settings-panel {
-    @apply fixed inset-0 bg-slate-900 flex justify-center items-center;
+    @apply fixed inset-0 bg-slate-900 flex justify-center items-start;
   }
 
   .settings-panel-card {
-    @apply bg-slate-800 rounded-lg shadow-xl p-6 w-full max-w-sm;
+    @apply bg-slate-800 rounded-lg shadow-xl p-6 w-full mt-10 max-w-sm;
   }
 
   .settings-header {
@@ -279,6 +279,7 @@
     border-radius: 4px;
     border: 1px solid #ccc;
     overflow: hidden;
+    @apply overflow-hidden overflow-y-auto max-h-64
 }
 
 /* Individual links inside the dropdown */
