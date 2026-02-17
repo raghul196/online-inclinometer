@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../logo-144.png" />
+  <title>Inclinomètre en Ligne | Outil de Mesure d'Angle</title>
+  <link rel="stylesheet" href="../output.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5227302043053716"
+     crossorigin="anonymous"></script>
+  <meta name="description" content="Mesurez le tangage et le roulis en ligne gratuitement. Aucune installation d'application n'est nécessaire. Parfait pour le photovoltaïque solaire, la construction et le nivellement de bricolage à l'aide de votre navigateur mobile">
+  <meta property="og:title" content="Inclinomètre en Ligne | Mesurez les Angles de Surface avec votre appareil Mobile" />
+  <meta property="og:description" content="Mesurez les angles de surface (tangage et roulis) en ligne gratuitement avec le navigateur de votre appareil mobile sans aucune autre installation. Parfait pour l'installation de panneaux solaires photovoltaïques, le nivellement, la construction et les projets de bricolage." />
+  <meta property="og:url" content="https://online-inclinometer.com/fr/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://online-inclinometer.com/logo-144.png" />
+  <meta property="og:site_name" content="Inclinomètre en Ligne" />
+  <link rel="apple-touch-icon" href="../logo-144.png">
+
+  <link rel="canonical" href="https://online-inclinometer.com/fr/" />
+  <link rel="alternate" hreflang="en" href="https://online-inclinometer.com/" />
+  <link rel="alternate" hreflang="de" href="https://online-inclinometer.com/de/" />
+  <link rel="alternate" hreflang="es" href="https://online-inclinometer.com/es/" />
+  <link rel="alternate" hreflang="fr" href="https://online-inclinometer.com/fr/" />
+  <link rel="alternate" hreflang="it" href="https://online-inclinometer.com/it/" />
+  <link rel="alternate" hreflang="x-default" href="https://online-inclinometer.com/" />
+  <link rel="sitemap" type="application/xml" href="https://online-inclinometer.com/sitemap.xml" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Inclinomètre en Ligne",
+      "applicationCategory": "Tool",
+      "operatingSystem": "Any",
+      "description": "Un outil en ligne gratuit pour mesurer les angles de surface (tangage et roulis) à l'aide du navigateur de votre appareil mobile. Idéal pour diverses tâches comme l'installation de panneaux solaires, la construction et les projets de bricolage.",
+      "author": {
+        "@type": "Person",
+        "name": "Raghul Babu"
+      },
+      "url": "https://online-inclinometer.com/fr/",
+      "image": "https://online-inclinometer.com/logo-144.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment utiliser cet inclinomètre en ligne ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Autorisez l'accès aux capteurs, appuyez sur Démarrer la mesure et placez votre appareil sur la surface. L'inclinomètre affichera les angles de tangage (axe X) et de roulis (axe Y) en temps réel. Utilisez le bouton Zéro pour définir un point de référence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la précision de cet outil inclinomètre ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La précision dépend de la qualité de l'accéléromètre de votre appareil. Pour les tâches de bricolage et de loisirs, elle est très précise. Pour une précision de niveau métrologique professionnel, un niveau à bulle calibré dédié est recommandé. Utilisez la méthode de calibrage par rotation à 180° pour une meilleure précision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mes données sont-elles privées et sécurisées ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, toutes les données des capteurs sont traitées directement sur votre appareil dans votre navigateur. Aucune information n'est envoyée à nos serveurs. Vos mesures sont entièrement privées."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "À quoi puis-je utiliser cet inclinomètre ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vous pouvez l'utiliser pour l'installation de panneaux solaires, la construction, la menuiserie, les projets de bricolage, la photographie, le nivellement de véhicules, la plomberie et toute tâche nécessitant une mesure d'angle ou de pente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment compenser le relief de l'appareil photo de mon téléphone ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Placez votre téléphone sur la surface avec le relief de l'appareil photo, notez la lecture, puis appuyez sur le bouton Zéro. Cela calibre l'effet du relief de l'appareil photo, permettant des mesures précises."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body class="app-body">
+
+  <header class="app-header">
+    <div class="placeholder"><img src="../logo-300.png" alt="Inclinomètre en Ligne - Outil de mesure d'angle gratuit" /></div> <!-- placeholder -->
+    <div class = "pr-8">
+      <h1 class="main-title">Inclinomètre en Ligne</h1>
+      <h2 class = "pl-2"> Mesurez les Angles Instantanément gratuitement</h3>
+    </div>
+    <button id="settings-btn" class="settings-button">
+      <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+    </button>
+  </header>
+
+  <div class="main-content-area">
+    <div class="inclinometer-container">
+      <div class="instruction-text-container">
+        <p class="instruction-text">Placez l'appareil à plat sur la surface</p>
+      </div>
+
+      <div class="bubble-container-background">
+        <div id="bubble">
+        </div>
+        <div class="bubble-center-mark"></div>
+      </div>
+
+      <div class="readout-grid">
+        <div class="readout-box">
+          <span class="readout-label">Tangage (X)</span>
+          <span id="pitch-val" class="readout-value">-°</span>
+        </div>
+        <div class="readout-box">
+          <span class="readout-label">Roulis (Y)</span>
+          <span id="roll-val" class="readout-value">-°</span>
+        </div>
+      </div>
+
+      <div class="button-container">
+          <button id="zero-btn" class="zero-button">
+            Zéro
+          </button>
+          <button id="start-btn" class="control-button">
+              Démarrer la mesure
+          </button>
+          <button id="stop-btn" class="control-button hidden">
+              Arrêter la mesure
+          </button>
+      </div>
+      <div class="qr-container">
+        <div class = "qr-text">
+          <strong class = "text-lg">Vous utilisez ceci sur votre ordinateur ?</strong>
+          <p> La plupart des ordinateurs ne disposent pas des capteurs requis. <strong>Scannez le code QR</strong> pour continuer sur votre appareil mobile.</p>
+        </div>
+        <img src = "../qr/fr.png" alt = "Code QR pour ce site web" >
+      </div>
+    </div>
+
+
+    <div class="promo-banner">
+      <span class="promo-text">Vous travaillez sur un projet solaire ?</span>
+      <div class="promo-divider"></div>
+      <a href="https://pvfreund.com/?lang=fr"
+        class="promo-link">
+        Essayez notre outil gratuit de conception PV sur <strong class="promo-link-strong">PV Freund</strong>
+      </a>
+    </div>
+
+    <div class="how-it-works-section">
+      <h2 class="section-title">Comment utiliser cet inclinomètre en ligne pour mesurer les angles</h2>
+      <p class="section-intro">
+        Cet inclinomètre en ligne est une application Web conçue pour mesurer les angles de surface (pente, tangage et roulis) avec une grande précision, en utilisant les capteurs déjà intégrés à votre smartphone ou tablette.
+        Il transforme gratuitement votre appareil en un niveau à bulle numérique puissant, un niveau à bulle ou un clinomètre, sans nécessiter aucune installation de logiciel. Tout fonctionne directement dans votre navigateur Web,
+        ce qui facilite la mesure des angles et des pentes n'importe où. Utilisez-le comme un outil fiable pour mesurer un angle, mesurer une pente ou vérifier le tangage et le roulis.
+      </p>
+
+      <div class="section-grid">
+        <div>
+          <h3 class="subsection-title">Fonctionnalité de base</h3>
+          <ul class="feature-list">
+            <li><strong>Mesure d'angle en temps réel :</strong> Une fois que vous avez autorisé l'accès aux capteurs et appuyé sur <i>Démarrer</i>, l'application lit les données de l'accéléromètre et du gyroscope de votre appareil pour calculer le tangage
+              (axe X) et le roulis (axe Y) en temps réel. Cela fournit une mesure instantanée de l'angle et de la pente.</li>
+            <li><strong>Niveau à bulle de haute précision :</strong> L'interface graphique centrale présente une bulle virtuelle qui se déplace en fonction de l'inclinaison de l'appareil, fournissant un guide visuel intuitif pour
+              atteindre un niveau parfait. C'est un inclinomètre gratuit dans votre navigateur.</li>
+            <li><strong>Calibrage à zéro :</strong> Le bouton <i>Zéro</i> vous permet de définir n'importe quelle surface comme point de référence (0 degré). Ceci est utile pour mesurer l'angle d'une surface par rapport à une autre,
+              plutôt qu'au niveau absolu. Une fonctionnalité parfaite pour n'importe quel outil d'angle dans le navigateur. Je peux également l'utiliser pour ajuster les bosses de vos appareils mobiles comme les appareils photo en saillie.</li>
+            <li><strong>Nivellement sans visibilité :</strong> Activez le retour audio dans les paramètres, et votre appareil émettra un bip lorsqu'un niveau parfait sera atteint, vous permettant de niveler les surfaces sans surveiller constamment
+              l'écran.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="subsection-title">Avis de non-responsabilité : Comprendre la précision</h3>
+          <p class="paragraph-margin">
+            Veuillez noter que bien que cet outil offre un moyen pratique de mesurer la pente, les capteurs d'un smartphone classique ne sont pas conçus pour une mesure d'angle de qualité métrologique.
+            Des facteurs tels que la qualité du capteur, le calibrage de l'appareil et même de petites bosses sur le boîtier de votre téléphone peuvent introduire des erreurs. Pour de nombreuses tâches de bricolage et de loisirs, la précision est plus que suffisante.
+            Cependant, pour les applications professionnelles nécessitant une précision certifiée, un niveau à bulle calibré et dédié est recommandé. Cet outil fournit une mesure d'angle fiable pour la plupart des besoins quotidiens.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accuracy-section">
+      <h3 class="subsection-title">Comment améliorer la précision des mesures</h3>
+      <p class="paragraph-margin">
+        Vous pouvez améliorer considérablement la précision de votre mesure de pente et compenser le biais du capteur en utilisant une méthode de calibrage simple en deux étapes.
+        Ce processus annule efficacement la plupart de l'erreur de décalage de zéro inhérente au téléphone lorsque vous devez mesurer un angle avec une meilleure précision.
+      </p>
+      <ol class="feature-list list-decimal">
+        <li><strong>Première mesure :</strong> Placez votre téléphone sur la surface que vous souhaitez mesurer et notez la lecture de l'angle (par ex. 8°).</li>
+        <li><strong>Deuxième mesure :</strong> Sans le soulever, faites pivoter votre téléphone de 180° exactement au même endroit (de sorte qu'il soit « tête-bêche » par rapport à sa position d'origine) et prenez une deuxième lecture (par ex. 10°).</li>
+        <li><strong>Calculez l'angle réel :</strong> L'angle réel est la moyenne de ces deux mesures. Par exemple : (8 + 10) / 2 = 9°. C'est votre pente la plus précise dans le navigateur.</li>
+      </ol>
+      <div class="accuracy-image-container">
+        <svg width="100%" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"></path>
+            </marker>
+            <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+              <feOffset dx="1" dy="1" />
+              <feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer>
+              <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+            </filter>
+          </defs>
+
+          <path d="M 20,180 L 100,100 L 380,100 L 300,180 Z" fill="#334155" stroke="#64748b" stroke-width="2"/>
+          <text x="200" y="200" fill="#94a3b8" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="bold" style="letter-spacing: 1px;">SURFACE À MESURER</text>
+
+          <g transform="translate(120, 140)" filter="url(#shadow)">
+            <rect x="-30" y="-45" width="60" height="90" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+            <rect x="-26" y="-38" width="52" height="76" rx="2" fill="#0f172a" />
+            <circle cx="0" cy="-41" r="2" fill="#334155"/>
+            <text x="0" y="5" fill="#38bdf8" font-family="sans-serif" font-size="10" text-anchor="middle">A</text>
+          </g>
+
+          <g transform="translate(280, 140)" filter="url(#shadow)">
+            <g transform="rotate(180)">
+              <rect x="-30" y="-45" width="60" height="90" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+              <rect x="-26" y="-38" width="52" height="76" rx="2" fill="#0f172a" />
+              <circle cx="0" cy="-41" r="2" fill="#334155"/>
+            </g>
+            <text x="0" y="5" fill="#38bdf8" font-family="sans-serif" font-size="10" text-anchor="middle">B</text>
+          </g>
+
+          <path d="M 150,100 Q 200,30 250,100" stroke="#38bdf8" stroke-width="2" fill="none" stroke-dasharray="4" marker-end="url(#arrow)"/>
+          <text x="200" y="50" fill="#e2e8f0" font-family="sans-serif" font-size="11" text-anchor="middle">Rotation de 180° sur la surface</text>
+
+          <text x="100" y="90" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">1. Prenez la mesure</text>
+          <text x="320" y="90" fill="#e2e8f0" font-family="sans-serif" font-size="10" text-anchor="middle">2. Retournez et faites la moyenne des résultats</text>
+        </svg>
+        <p class="image-caption">Utilisez la méthode de rotation à 180° pour annuler les erreurs de capteur et obtenir des mesures d'angle plus précises.</p>
+      </div>
+    </div>
+
+    <div class="accuracy-section">
+      <h3 class="subsection-title">Comment effectuer le calibrage « Zéro »</h3>
+      <p class="paragraph-margin">
+          Le calibrage à zéro vous permet de définir votre surface actuelle comme nouveau point de référence (0 degré), ce qui est essentiel pour mesurer des angles relatifs ou compenser des surfaces inégales.
+          Voici comment procéder :
+      </p>
+      <ol class="feature-list list-decimal">
+          <li><strong>Placer l'appareil :</strong> Posez fermement votre smartphone ou votre tablette sur la surface que vous souhaitez désigner comme référence à 0°.</li>
+          <li><strong>Stabiliser :</strong> Assurez-vous que votre appareil est stable et ne bouge pas.</li>
+          <li><strong>Appuyez sur Zéro pour calibrer :</strong> Appuyez sur le bouton <strong>Zéro</strong> de l'interface de l'inclinomètre.</li>
+          <li><strong>Nouvelle ligne de base :</strong> Les lectures actuelles de tangage et de roulis seront instantanément remises à 0°, établissant cette orientation comme votre nouvelle ligne de base pour toutes les mesures ultérieures.</li>
+      </ol>
+
+      <div class="zero-calibration-image-container accuracy-image-container">
+          <svg width="100%" viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"></path>
+              </marker>
+              <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+                <feOffset dx="1" dy="2" />
+                <feComponentTransfer><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
+                <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
+            </defs>
+
+            <line x1="40" y1="280" x2="460" y2="280" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6,4"/>
+            <text x="250" y="305" fill="#64748b" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">HORIZONTALE PARALLÈLE À LA TERRE</text>
+
+            <g transform="translate(40, 180) rotate(-5)">
+              <path d="M 0,60 L 40,0 L 200,0 L 160,60 Z" fill="#334155" fill-opacity="0.9" stroke="#64748b" stroke-width="1.5"/>
+              <text x="100" y="90" fill="#e2e8f0" font-family="sans-serif" font-size="14" text-anchor="middle" transform="rotate(5, 100, 80)">Surface de référence (5°)</text>
+
+              <g transform="translate(100, 30) rotate(5)" filter="url(#shadow)">
+                <rect x="-25" y="-40" width="50" height="80" rx="5" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+                <rect x="-21" y="-32" width="42" height="64" rx="2" fill="#0f172a" />
+                <circle cx="0" cy="-36" r="1.5" fill="#334155"/>
+                <text x="0" y="5" fill="#fbbf24" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">0°</text>
+                <text x="0" y="18" fill="#fbbf24" font-family="sans-serif" font-size="10" text-anchor="middle">Mis à zéro</text>
+              </g>
+            </g>
+
+            <g transform="translate(280, 160) rotate(-15)">
+              <path d="M 0,60 L 40,0 L 200,0 L 160,60 Z" fill="#334155" fill-opacity="0.9" stroke="#64748b" stroke-width="1.5"/>
+              <text x="100" y="90" fill="#e2e8f0" font-family="sans-serif" font-size="14" text-anchor="middle" transform="rotate(15, 100, 80)">Surface cible (15°)</text>
+
+              <g transform="translate(100, 30) rotate(15)" filter="url(#shadow)">
+                <rect x="-25" y="-40" width="50" height="80" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+                <rect x="-21" y="-32" width="42" height="64" rx="2" fill="#0f172a" />
+                <circle cx="0" cy="-36" r="1.5" fill="#334155"/>
+                <text x="0" y="5" fill="#38bdf8" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">10°</text>
+
+              </g>
+            </g>
+
+            <path d="M 180,150 Q 250,100 320,130" stroke="#38bdf8" stroke-width="2" fill="none" stroke-dasharray="4" marker-end="url(#arrow)"/>
+            <text x="250" y="95" fill="#e2e8f0" font-family="sans-serif" font-size="14" text-anchor="middle">Transférer l'appareil pour mesurer la différence de pente</text>
+
+            <text x="140" y="45" fill="#fbbf24" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">ÉTAPE 1 : Définir la référence</text>
+            <text x="380" y="45" fill="#38bdf8" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">ÉTAPE 2 : Mesurer l'angle</text>
+          </svg>
+          <p class="image-caption">Le calibrage à zéro définit la surface actuelle comme référence à 0°, permettant des mesures d'angle relatives.</p>
+      </div>
+    </div>
+
+    <div class="accuracy-section">
+      <h3 class="subsection-title">Ajustement pour les appareils photo en saillie</h3>
+      <p class="paragraph-margin">
+        Les smartphones modernes ont souvent des bosses d'appareil photo qui les empêchent de reposer parfaitement à plat. Cela peut interférer avec des mesures précises, mais vous pouvez facilement le corriger en utilisant le bouton <strong>Zéro</strong>, comme illustré ci-dessous.
+      </p>
+      <ol class="feature-list list-decimal">
+        <li><strong>Placer et observer :</strong> Positionnez votre téléphone sur la surface. Remarquez que la bosse de l'appareil photo crée une légère inclinaison stable, affichant une lecture non nulle.</li>
+        <li><strong>Appuyez sur Zéro :</strong> Appuyez sur le bouton <strong>Zéro</strong>. Cela indique à l'inclinomètre de traiter la position inclinée actuelle du téléphone comme le nouveau point de référence « 0° ».</li>
+        <li><strong>Mesurer avec précision :</strong> L'affichage indiquera maintenant 0°. L'effet de la bosse de l'appareil photo est annulé, vous permettant de prendre des mesures précises par rapport à la surface.</li>
+      </ol>
+      <div class="accuracy-image-container">
+          <svg width="100%" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"></path>
+              </marker>
+            </defs>
+
+            <g transform="translate(50, 150)">
+              <rect x="0" y="50" width="160" height="8" fill="#334155" stroke="#475569"/>
+
+              <g >
+                <rect x="20" y="36" width="120" height="8" transform="rotate(-5, 80, 36)" rx="2" fill="#1e293b" stroke="#94a3b8"/>
+                <rect x="105" y="44" width="30" height="8" fill="#94a3b8" transform="rotate(-5, 80, 38)" />
+                <text x="80" y="34" fill="#fbbf24" font-family="sans-serif" font-size="14" text-anchor="middle">5°</text>
+              </g>
+              <text x="80" y="-100" fill="#fbbf24" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">1. Erreur de l'appareil photo</text>
+              <text x="80" y="85" fill="#94a3b8" font-family="sans-serif" font-size="13" text-anchor="middle">L'appareil lit l'inclinaison sur une surface plane</text>
+            </g>
+
+            <path d="M 190,150 Q 250,100 310,150" stroke="#38bdf8" stroke-width="2" fill="none" stroke-dasharray="4" marker-end="url(#arrow)"/>
+            <text x="250" y="110" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle" font-weight="bold">APPUYER SUR "ZÉRO"</text>
+
+            <g transform="translate(290, 150)">
+              <rect x="0" y="50" width="160" height="8" fill="#334155" stroke="#475569"/>
+
+              <g >
+                <rect x="20" y="36" width="120" height="8" transform="rotate(-5, 80, 36)" rx="2" fill="#1e293b" stroke="#94a3b8"/>
+                <rect x="105" y="44" width="30" height="8" fill="#94a3b8" transform="rotate(-5, 80, 38)" />
+                <text x="80" y="34" fill="#38bdf8" font-family="sans-serif" font-size="14" text-anchor="middle">0°</text>
+              </g>
+              <text x="80" y="-100" fill="#38bdf8" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">2. Décalage calibré</text>
+              <text x="80" y="85" fill="#94a3b8" font-family="sans-serif" font-size="13" text-anchor="middle">La bosse est maintenant ignorée</text>
+            </g>
+          </svg>
+          <p class="image-caption">Utilisez "Zéro" pour compenser l'inclinaison causée par une bosse de l'appareil photo.</p>
+      </div>
+    </div>
+
+    <div class="use-cases-section">
+      <h3 class="subsection-title">Cas d'utilisation détaillés de notre inclinomètre</h3>
+      <p class="paragraph-margin">Cet inclinomètre basé sur un navigateur est un outil polyvalent pour mesurer le tangage et le roulis pour de nombreuses tâches :</p>
+      <ul class="feature-list space-y-4">
+        <li>
+          <strong>Construction et menuiserie :</strong>
+          Utilisez ce clinomètre pour vous assurer que les murs sont parfaitement verticaux et les sols de niveau. Lors de la charpente d'un toit, mesurez la pente pour vous assurer que les chevrons sont coupés et installés au bon angle. Il est également idéal pour définir la bonne pente pour le drainage des patios ou des allées.
+        </li>
+        <li>
+          <strong>Installation de panneaux solaires :</strong>
+          Pour maximiser la production d'énergie, les panneaux solaires doivent être réglés à un angle d'inclinaison optimal en fonction de la latitude et de la saison. Utilisez cet outil pour mesurer le tangage avec précision lors de l'installation, en vous assurant que vos panneaux ont la bonne orientation par rapport au soleil pour une efficacité maximale.
+        </li>
+        <li>
+          <strong>Bricolage et amélioration de l'habitat :</strong>
+          Accrochez des cadres photo parfaitement droits à chaque fois. Lors de l'assemblage de meubles ou de l'installation d'armoires de cuisine, utilisez l'inclinomètre pour vous assurer que tout est de niveau. C'est également l'outil idéal pour mesurer la pente lors de l'installation d'appareils électroménagers comme les machines à laver pour éviter le déséquilibre et les vibrations.
+        </li>
+        <li>
+          <strong>Photographie et vidéographie :</strong>
+          Évitez les horizons inclinés en utilisant cet outil pour niveler votre appareil photo sur un trépied. Ceci est particulièrement essentiel pour la photographie de paysage, d'architecture et panoramique où les lignes droites sont essentielles pour un résultat professionnel.
+        </li>
+        <li>
+          <strong>Nivellement de véhicules et de camping-cars :</strong>
+          Vérifiez les angles de la transmission après avoir modifié la suspension d'un véhicule. En camping, utilisez-le pour niveler votre caravane ou votre camping-car pour plus de confort et pour vous assurer que les appareils (comme les réfrigérateurs) fonctionnent correctement. C'est un outil de mesure de pente pratique pour toute configuration de véhicule.
+        </li>
+          <li>
+          <strong>Plomberie et drainage :</strong>
+          Lors de l'installation de tuyaux de drainage, une pente douce et constante est cruciale pour un bon écoulement. Utilisez cet inclinomètre en ligne pour mesurer l'angle avec précision et éviter les problèmes de blocages ou d'eau stagnante à l'avenir.
+        </li>
+      </ul>
+    </div>
+
+    <div class="faq-section">
+      <h2 class="section-title">Foire aux questions</h2>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Comment utiliser cet inclinomètre en ligne ?</span>
+            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Autorisez l'accès aux capteurs, appuyez sur Démarrer la mesure et placez votre appareil sur la surface. L'inclinomètre affichera les angles de tangage (axe X) et de roulis (axe Y) en temps réel. Utilisez le bouton Zéro pour définir un point de référence.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quelle est la précision de cet outil inclinomètre ?</span>
+            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <p>La précision dépend de la qualité de l'accéléromètre de votre appareil. Pour les tâches de bricolage et de loisirs, elle est très précise. Pour une précision de niveau métrologique professionnel, un niveau à bulle calibré dédié est recommandé. Utilisez la méthode de calibrage par rotation à 180° pour une meilleure précision.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Mes données sont-elles privées et sécurisées ?</span>
+            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Oui, toutes les données des capteurs sont traitées directement sur votre appareil dans votre navigateur. Aucune information n'est envoyée à nos serveurs. Vos mesures sont entièrement privées.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>À quoi puis-je utiliser cet inclinomètre ?</span>
+            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Vous pouvez l'utiliser pour l'installation de panneaux solaires, la construction, la menuiserie, les projets de bricolage, la photographie, le nivellement de véhicules, la plomberie et toute tâche nécessitant une mesure d'angle ou de pente.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Comment compenser le relief de l'appareil photo de mon téléphone ?</span>
+            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Placez votre téléphone sur la surface avec le relief de l'appareil photo, notez la lecture, puis appuyez sur le bouton Zéro. Cela calibre l'effet du relief de l'appareil photo, permettant des mesures précises.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-outro">
+      <h3 class="subsection-title">100% privé et sécurisé</h3>
+      <p>
+        Nous nous engageons à respecter votre vie privée. Toutes les données des capteurs sont traitées directement sur votre appareil par le navigateur. Aucune information n'est jamais envoyée à nos serveurs. Vos mesures sont les vôtres.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <a href="../privacy.html" class="footer-link">Confidentialité</a>
+      <a href="../contact.html" class="footer-link">Contact</a>
+      <a href="../aboutus.html" class="footer-link">À propos</a>
+    </div>
+  </div>
+
+  <div id="my-ad-container" style="width: 100%; text-align: center;">
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-5227302043053716"
+          data-ad-slot="5913698152"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+  </div>
+
+  <div id="settings-panel" class = "hidden">
+    <div class="settings-panel-card">
+        <div class="settings-header">
+            <h2 class="settings-title">Paramètres</h2>
+            <button id="close-settings-btn" class="close-settings-button">
+                <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div class="settings-options">
+            <!-- Audio Toggle -->
+            <div class="settings-option">
+                <label for="audio-toggle" class="settings-label">Retour audio</label>
+                <button id="audio-toggle">
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Language Selection -->
+            <div class="settings-option">
+                <label for="lang-select" class="settings-label">Langue</label>
+                <div class="dropdown-wrapper">
+                    <div class="form-select dropdown-trigger">Français</div>
+
+                    <div class="dropdown-content">
+                        <a href="https://online-inclinometer.com">English</a>
+                        <a href="https://online-inclinometer.com/de">Deutsch</a>
+                        <a href="https://online-inclinometer.com/es">Español</a>
+                        <a href="https://online-inclinometer.com/it">Italiano</a>
+                        <a href="https://online-inclinometer.com/fr">Français</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script src="../app.js" defer></script>
+  <script data-goatcounter="https://online-inclinometer.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

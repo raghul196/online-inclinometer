@@ -5,56 +5,216 @@
   <!-- English Main Page -->
   <url>
     <loc>https://online-inclinometer.com/</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://online-inclinometer.com/" />
     <xhtml:link rel="alternate" hreflang="de" href="https://online-inclinometer.com/de/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://online-inclinometer.com/es/" />
     <xhtml:link rel="alternate" hreflang="it" href="https://online-inclinometer.com/it/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://online-inclinometer.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://online-inclinometer.com/pt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://online-inclinometer.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://online-inclinometer.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://online-inclinometer.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://online-inclinometer.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://online-inclinometer.com/id/" />
   </url>
  
-
   <!-- German Version -->
   <url>
     <loc>https://online-inclinometer.com/de/</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://online-inclinometer.com/" />
     <xhtml:link rel="alternate" hreflang="de" href="https://online-inclinometer.com/de/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://online-inclinometer.com/es/" />
     <xhtml:link rel="alternate" hreflang="it" href="https://online-inclinometer.com/it/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://online-inclinometer.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://online-inclinometer.com/pt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://online-inclinometer.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://online-inclinometer.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://online-inclinometer.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://online-inclinometer.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://online-inclinometer.com/id/" />
   </url>
 
   <!-- Spanish Version -->
   <url>
     <loc>https://online-inclinometer.com/es/</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://online-inclinometer.com/" />
     <xhtml:link rel="alternate" hreflang="de" href="https://online-inclinometer.com/de/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://online-inclinometer.com/es/" />
     <xhtml:link rel="alternate" hreflang="it" href="https://online-inclinometer.com/it/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://online-inclinometer.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://online-inclinometer.com/pt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://online-inclinometer.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://online-inclinometer.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://online-inclinometer.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://online-inclinometer.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://online-inclinometer.com/id/" />
   </url>
 
   <!-- Italian Version -->
   <url>
     <loc>https://online-inclinometer.com/it/</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://online-inclinometer.com/" />
     <xhtml:link rel="alternate" hreflang="de" href="https://online-inclinometer.com/de/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://online-inclinometer.com/es/" />
     <xhtml:link rel="alternate" hreflang="it" href="https://online-inclinometer.com/it/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://online-inclinometer.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://online-inclinometer.com/pt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://online-inclinometer.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://online-inclinometer.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://online-inclinometer.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://online-inclinometer.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://online-inclinometer.com/id/" />
+  </url>
+
+  <!-- French Version -->
+  <url>
+    <loc>https://online-inclinometer.com/fr/</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://online-inclinometer.com/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://online-inclinometer.com/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://online-inclinometer.com/es/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://online-inclinometer.com/it/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://online-inclinometer.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://online-inclinometer.com/pt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://online-inclinometer.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://online-inclinometer.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://online-inclinometer.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://online-inclinometer.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://online-inclinometer.com/id/" />
+  </url>
+
+  <!-- Portuguese Version -->
+  <url>
+    <loc>https://online-inclinometer.com/pt/</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://online-inclinometer.com/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://online-inclinometer.com/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://online-inclinometer.com/es/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://online-inclinometer.com/it/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://online-inclinometer.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://online-inclinometer.com/pt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://online-inclinometer.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://online-inclinometer.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://online-inclinometer.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://online-inclinometer.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://online-inclinometer.com/id/" />
+  </url>
+
+  <!-- Hindi Version -->
+  <url>
+    <loc>https://online-inclinometer.com/hi/</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://online-inclinometer.com/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://online-inclinometer.com/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://online-inclinometer.com/es/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://online-inclinometer.com/it/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://online-inclinometer.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://online-inclinometer.com/pt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://online-inclinometer.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://online-inclinometer.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://online-inclinometer.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://online-inclinometer.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://online-inclinometer.com/id/" />
+  </url>
+
+  <!-- Arabic Version -->
+  <url>
+    <loc>https://online-inclinometer.com/ar/</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://online-inclinometer.com/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://online-inclinometer.com/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://online-inclinometer.com/es/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://online-inclinometer.com/it/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://online-inclinometer.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://online-inclinometer.com/pt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://online-inclinometer.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://online-inclinometer.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://online-inclinometer.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://online-inclinometer.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://online-inclinometer.com/id/" />
+  </url>
+
+  <!-- Japanese Version -->
+  <url>
+    <loc>https://online-inclinometer.com/ja/</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://online-inclinometer.com/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://online-inclinometer.com/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://online-inclinometer.com/es/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://online-inclinometer.com/it/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://online-inclinometer.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://online-inclinometer.com/pt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://online-inclinometer.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://online-inclinometer.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://online-inclinometer.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://online-inclinometer.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://online-inclinometer.com/id/" />
+  </url>
+
+  <!-- Korean Version -->
+  <url>
+    <loc>https://online-inclinometer.com/ko/</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://online-inclinometer.com/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://online-inclinometer.com/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://online-inclinometer.com/es/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://online-inclinometer.com/it/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://online-inclinometer.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://online-inclinometer.com/pt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://online-inclinometer.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://online-inclinometer.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://online-inclinometer.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://online-inclinometer.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://online-inclinometer.com/id/" />
+  </url>
+
+  <!-- Indonesian Version -->
+  <url>
+    <loc>https://online-inclinometer.com/id/</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://online-inclinometer.com/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://online-inclinometer.com/de/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://online-inclinometer.com/es/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://online-inclinometer.com/it/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://online-inclinometer.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://online-inclinometer.com/pt/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://online-inclinometer.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://online-inclinometer.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://online-inclinometer.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://online-inclinometer.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://online-inclinometer.com/id/" />
   </url>
 
   <!-- Privacy Page -->
   <url>
     <loc>https://online-inclinometer.com/privacy.html</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -62,7 +222,7 @@
   <!-- Contact Page -->
   <url>
     <loc>https://online-inclinometer.com/contact.html</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -70,7 +230,7 @@
   <!-- About Page -->
   <url>
     <loc>https://online-inclinometer.com/aboutus.html</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
