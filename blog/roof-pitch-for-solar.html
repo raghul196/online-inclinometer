@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How I Measured My Roof Pitch With My Phone Before Planning Solar</title>
+  <meta name="description" content="The roof-pitch problem that started this inclinometer: measuring a tiled roof from a ladder with a phone, and why the tiles gave the wrong number.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://online-inclinometer.com/blog/roof-pitch-for-solar.html">
+  <link rel="icon" type="image/png" href="/logo-144.png">
+  <link rel="apple-touch-icon" href="/logo-144.png">
+  <meta property="og:title" content="How I Measured My Roof Pitch With My Phone Before Planning Solar">
+  <meta property="og:description" content="The roof-pitch problem that started this inclinometer: measuring a tiled roof from a ladder with a phone, and why the tiles gave the wrong number.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://online-inclinometer.com/blog/roof-pitch-for-solar.html">
+  <meta property="og:image" content="https://online-inclinometer.com/logo-300.png">
+  <meta property="og:site_name" content="Online Inclinometer">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How I Measured My Roof Pitch With My Phone Before Planning Solar",
+  "description": "The roof-pitch problem that started this inclinometer: measuring a tiled roof from a ladder with a phone, and why the tiles gave the wrong number.",
+  "author": {
+    "@type": "Person",
+    "name": "Raghul Babu",
+    "url": "https://raghulbabu.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Raghul Babu",
+    "url": "https://raghulbabu.com"
+  },
+  "datePublished": "2026-10-20",
+  "dateModified": "2026-10-20",
+  "mainEntityOfPage": "https://online-inclinometer.com/blog/roof-pitch-for-solar.html",
+  "image": "https://online-inclinometer.com/logo-300.png"
+}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/logo-144.png" alt="" width="36" height="36">Online Inclinometer</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/">Open the tool</a>
+      <a href="/blog/">Guides</a>
+      <a href="/aboutus.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <article>
+    <h1>How I Measured My Roof Pitch With My Phone Before Planning Solar</h1>
+    <p class="byline">By <a href="/aboutus.html">Raghul Babu</a> &middot; Published 20 October 2026</p>
+    <p class="lead">When I started planning solar panels for our house, every calculator I opened asked the same first question: what is your roof pitch? I didn't have the building drawings, and I was not going to walk around on the tiles to find out. My phone already has a sensor that knows which way is down, so I wrote a small web page to read it. That page grew into this inclinometer. Here is how I measured the roof, and the mistake I nearly made.</p>
+    <p><a class="cta" href="/">Open the inclinometer &rarr;</a></p>
+
+<h2>Why the roof pitch matters for solar</h2>
+<p>The pitch decides how directly the panels face the sun, so it goes straight into any yield estimate. When I entered the roof into <a href="https://pvfreund.com/">PV Freund</a>, the planning tool I also build, the pitch and the direction of the roof were the two numbers that moved the result the most. Mounting hooks and rails are also chosen for a range of pitches, so the installer wants the number too.</p>
+<p>You don't need it to a tenth of a degree. You do need to be in the right range, and you need to know you measured the roof and not something else.</p>
+
+<h2>What you need</h2>
+<ul>
+  <li>A smartphone (most phones made in the last several years have the motion sensor this uses)</li>
+  <li>A long straight edge: an aluminium spirit level or a straight piece of timber, about 1&nbsp;m long</li>
+  <li>A ladder on firm ground, and a second person to hold it</li>
+  <li>Something to write the readings down</li>
+</ul>
+
+<h2>How I measured it</h2>
+<ol>
+  <li>We set the ladder at the eaves and my partner footed it. I stayed on the ladder the whole time and never stepped onto the roof.</li>
+  <li>I opened the inclinometer and pressed <strong>Start Measuring</strong>. On an iPhone the browser asks for permission to use motion sensors first; you have to allow it.</li>
+  <li>I laid the straight edge up the slope, across three rows of tiles, and put the phone flat on it with the top of the phone pointing up the roof. Lined up like that, the roof angle shows as <strong>Pitch (X)</strong>.</li>
+  <li>I waited for the number to stop moving. It read 35&deg;.</li>
+  <li>Without moving the straight edge, I turned the phone around so it pointed down the roof. The reading was now 36&deg; (with a minus sign, because the phone was facing the other way). I ignored the sign and averaged the two numbers: 35.5&deg;.</li>
+</ol>
+<p>The tool shows whole degrees, so that half degree only comes from averaging two readings. Turning the phone around cancels most of the phone's own built-in offset, which is why I do it for anything that matters.</p>
+
+<h2>Turning degrees into a roof pitch</h2>
+<p>Roofers in some countries describe pitch as rise over 12, like "6 in 12". To convert, multiply the tangent of the angle by 12. For my roof, 12 &times; tan(35.5&deg;) &asymp; 8.6, so a little steeper than 8 in 12. As a percentage it is 100 &times; tan(35.5&deg;) &asymp; 71%.</p>
+<div class="table-scroll">
+<table>
+  <tr><th>Angle</th><th>Rise in 12</th><th>Percent</th></tr>
+  <tr><td>18.4&deg;</td><td>4 in 12</td><td>33%</td></tr>
+  <tr><td>26.6&deg;</td><td>6 in 12</td><td>50%</td></tr>
+  <tr><td>33.7&deg;</td><td>8 in 12</td><td>67%</td></tr>
+  <tr><td>45&deg;</td><td>12 in 12</td><td>100%</td></tr>
+</table>
+</div>
+
+<h2>The mistake I nearly made</h2>
+<p>My very first reading was with the phone lying straight on a single tile. It said 32&deg;, and I almost wrote that down. Tiles overlap, so each one sits at a slightly shallower angle than the rafters underneath. A straight edge that rests on the bottom edges of several rows follows the line of the rafters instead, and that is the angle a solar planner or an installer means by roof pitch. On my roof the difference was three and a half degrees.</p>
+<p>A phone is not a certified instrument, and I used this reading for planning, not for ordering parts. The installer measured again before fitting anything, and their number agreed with mine to within a degree.</p>
+
+    <div class="box tip"><p><span class="label">Tip</span>Do the turn-around on every reading you plan to use. The two numbers will usually differ by a degree or so, and the average is closer to the truth than either one.</p></div>
+    <div class="box note"><p><span class="label">From Raghul</span>A phone is only about 15&nbsp;cm long, so laid straight on a roof it measures one tile, not the roof. On the 1&nbsp;m straight edge the readings were much steadier, because it spans several rows and smooths out the bumps. I also measured on both sides of the ladder, and the two spots differed by about a degree, which is normal on an older roof. I used the average.</p></div>
+
+    <section class="ready">
+      <h2>Ready to measure?</h2>
+      <p>The inclinometer runs in your phone's browser. Nothing to install, and your readings never leave your device.</p>
+      <p><a class="cta" href="/">Open the inclinometer &rarr;</a></p>
+      <p class="small">This is a phone-based tool, not a certified instrument. Don't rely on it for structural, safety-critical or professional work.</p>
+    </section>
+  </article>
+  <nav class="more" aria-label="More guides">
+    <h2>More guides</h2>
+    <ul>
+    <li><a href="/blog/solar-panel-tilt.html">Setting the Tilt of My Solar Panels With a Phone Inclinometer</a></li>
+    <li><a href="/blog/level-washing-machine.html">How I Stopped My Washing Machine Walking Across the Floor</a></li>
+    <li><a href="/blog/camera-bump-error.html">Why My Phone Said a Flat Table Was Tilted: Camera Bumps and Cases</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-brand"><img src="/logo-144.png" alt="" width="28" height="28">Online Inclinometer</div>
+    <p class="footer-desc">A free inclinometer that runs in your phone's browser. Nothing to install, nothing sent to a server.</p>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/">Tool</a>
+      <a href="/blog/">Guides</a>
+      <a href="/aboutus.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+    <p class="copyright">&copy; 2026 &middot; Built by <a href="https://raghulbabu.com">Raghul Babu</a></p>
+  </div>
+</footer>
+</body>
+</html>

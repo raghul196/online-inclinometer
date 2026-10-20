@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why My Phone Said a Flat Table Was Tilted: Camera Bumps and Cases</title>
+  <meta name="description" content="A protruding camera, a grip or a ring on the back can tilt your phone and throw off an inclinometer reading. What I learned testing my own tool, and the fixes that work.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://online-inclinometer.com/blog/camera-bump-error.html">
+  <link rel="icon" type="image/png" href="/logo-144.png">
+  <link rel="apple-touch-icon" href="/logo-144.png">
+  <meta property="og:title" content="Why My Phone Said a Flat Table Was Tilted: Camera Bumps and Cases">
+  <meta property="og:description" content="A protruding camera, a grip or a ring on the back can tilt your phone and throw off an inclinometer reading. What I learned testing my own tool, and the fixes that work.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://online-inclinometer.com/blog/camera-bump-error.html">
+  <meta property="og:image" content="https://online-inclinometer.com/logo-300.png">
+  <meta property="og:site_name" content="Online Inclinometer">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/blog/blog.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why My Phone Said a Flat Table Was Tilted: Camera Bumps and Cases",
+  "description": "A protruding camera, a grip or a ring on the back can tilt your phone and throw off an inclinometer reading. What I learned testing my own tool, and the fixes that work.",
+  "author": {
+    "@type": "Person",
+    "name": "Raghul Babu",
+    "url": "https://raghulbabu.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Raghul Babu",
+    "url": "https://raghulbabu.com"
+  },
+  "datePublished": "2026-10-20",
+  "dateModified": "2026-10-20",
+  "mainEntityOfPage": "https://online-inclinometer.com/blog/camera-bump-error.html",
+  "image": "https://online-inclinometer.com/logo-300.png"
+}
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/logo-144.png" alt="" width="36" height="36">Online Inclinometer</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/">Open the tool</a>
+      <a href="/blog/">Guides</a>
+      <a href="/aboutus.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <article>
+    <h1>Why My Phone Said a Flat Table Was Tilted: Camera Bumps and Cases</h1>
+    <p class="byline">By <a href="/aboutus.html">Raghul Babu</a> &middot; Published 20 October 2026</p>
+    <p class="lead">While testing this inclinometer on my kitchen table, I noticed the readings jumping between 0&deg; and 1&deg;, and the phone wobbled slightly when I tapped the screen. The table wasn't the problem. My phone was resting on its camera bump, and that tiny lump was tilting the whole phone. If your readings seem off, this is the first thing I'd check.</p>
+    <p><a class="cta" href="/">Open the inclinometer &rarr;</a></p>
+
+<h2>How much does a camera bump tilt the phone?</h2>
+<p>It's simple geometry. If the bump is <em>h</em> high and the phone rests on the bump at one end and on its edge at the other, a distance <em>L</em> apart, the tilt is arctan(<em>h</em> / <em>L</em>).</p>
+<ul>
+  <li>A 1.5&nbsp;mm bump with the contact points about 14&nbsp;cm apart: about 0.6&deg;.</li>
+  <li>A 5&nbsp;mm grip or ring in the middle of the back, about 7&nbsp;cm from the edge: about 4&deg;, and the phone rocks freely.</li>
+</ul>
+<p>The tool shows whole degrees, so 0.6&deg; is enough to tip a reading from 0&deg; to 1&deg;. Because the camera usually sits in a corner, the tilt is split between pitch and roll, so both numbers can be slightly off.</p>
+
+<h2>What you need</h2>
+<ul>
+  <li>Your phone, with whatever case you normally use</li>
+  <li>A surface you trust to be flat, like a kitchen worktop checked with a spirit level, or a sheet of glass</li>
+</ul>
+
+<h2>Three fixes, from best to quickest</h2>
+<ol>
+  <li><strong>Use a case that sits flush with the camera.</strong> Most cases have a raised back that makes the phone lie flat on its whole surface. Remove grips, rings and wallets clipped to the back.</li>
+  <li><strong>Turn the phone around.</strong> Take a reading, turn the phone 180&deg; on the same spot, and take another. The bump adds the same tilt to both readings, while the surface's slope changes sign when you turn the phone. So subtract the second reading from the first, keeping the signs, and halve it. On a flat table that gives 0&deg; even if both readings said 1&deg;. On a real slope, the signs differ, and this is the same as ignoring the minus sign and averaging. It also cancels the sensor's own offset.</li>
+  <li><strong>Use Zero.</strong> Place the phone on a flat surface, press <strong>Zero</strong>, and the tool treats that position as 0&deg;. This works well if the phone sits the same way every time. You can also press Zero before Start Measuring, and the tool will zero on the first reading.</li>
+</ol>
+
+<h2>One thing not to do</h2>
+<p>Don't measure with the phone face down to get the bump out of the way. Face down, the front-to-back reading sits near 180&deg;, and a tiny movement makes it jump from +180&deg; to &minus;180&deg;, which gives nonsense numbers. Keep the screen facing up.</p>
+
+    <div class="box tip"><p><span class="label">Tip</span>Before measuring anything important, lay the phone on a surface you know is flat and check it reads 0&deg; and 0&deg;. Ten seconds of checking can save you from cutting something at the wrong angle.</p></div>
+    <div class="box note"><p><span class="label">From Raghul</span>Test for rocking before you trust a number: press each corner of the phone lightly. If it clicks or the reading changes, the phone is balancing on its bump, and Zero won't help, because it may land differently next time. A cheap case that sits flush with the camera fixed it for me better than any calibration.</p></div>
+
+    <section class="ready">
+      <h2>Ready to measure?</h2>
+      <p>The inclinometer runs in your phone's browser. Nothing to install, and your readings never leave your device.</p>
+      <p><a class="cta" href="/">Open the inclinometer &rarr;</a></p>
+      <p class="small">This is a phone-based tool, not a certified instrument. Don't rely on it for structural, safety-critical or professional work.</p>
+    </section>
+  </article>
+  <nav class="more" aria-label="More guides">
+    <h2>More guides</h2>
+    <ul>
+    <li><a href="/blog/balcony-drainage-slope.html">Finding Out Why Water Pooled on My Balcony</a></li>
+    <li><a href="/blog/hang-floating-shelf.html">Hanging a Floating Shelf on My Own, With the Level Beep On</a></li>
+    <li><a href="/blog/level-campervan.html">Levelling a Campervan on a Sloping Campsite</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-brand"><img src="/logo-144.png" alt="" width="28" height="28">Online Inclinometer</div>
+    <p class="footer-desc">A free inclinometer that runs in your phone's browser. Nothing to install, nothing sent to a server.</p>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/">Tool</a>
+      <a href="/blog/">Guides</a>
+      <a href="/aboutus.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+    <p class="copyright">&copy; 2026 &middot; Built by <a href="https://raghulbabu.com">Raghul Babu</a></p>
+  </div>
+</footer>
+</body>
+</html>
