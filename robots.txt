@@ -4,8 +4,6 @@
 User-agent: *
 Allow: /
 Disallow: /settings.html
-Disallow: /*.js$
-Disallow: /*.css$
 
 # Specific rules for Google
 User-agent: Googlebot
